@@ -15,7 +15,7 @@ defmodule Quality do
 end
 
 defmodule Constellation do
-  defstruct id: 0, name: "Constellation", angle: 0, traitid: 0, positive: true
+  defstruct id: 0, name: "Constellation", angle: 0, traitid: 0, positive: true, elementid: 0, qualityid: 0
 end
 
 
