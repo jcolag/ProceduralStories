@@ -18,4 +18,12 @@ defmodule Constellation do
   defstruct id: 0, name: "Constellation", angle: 0, traitid: 0, positive: true, elementid: 0, qualityid: 0
 end
 
+defmodule Angle do
+  defstruct id: 0, name: "Angle", angle: 0, influence: 0
+end
+
+defmodule Aspect do
+  defstruct id: 0, name: "Aspect", angle: 0, influence: 0
+end
+
 
