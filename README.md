@@ -12,3 +12,12 @@ There are four broad parts of story generation that I have been looking at.
 
 Action resolution will probably (mostly) receive the least attention, since that's a well-studied problem through games.  And dialogue generation is, of course, an extremely difficult, well-studied, and maybe beyond the ability of algorithms to do in any reasonable way.
 
+## Character Generation
+
+There are quite a few ways to procedurally generate interesting information about a character.  A few come immediately to mind.
+
+### Astrological Generation (`astrochar.ex`)
+
+The first pass on character creation is a very, very old concept of mine to use the character's random birthday to generate an astrological profile in the European style.  Despite astrology being pseudoscience, the techniques are mostly straightforward and can be used as if the original classical planets are meaningful as people have thought, extended with modern planets, or use a completely original model of the solar system.  Likewise, the generated content could be vague personality traits or very specific abilities.  Since Kepler's laws of planetary motion are likely to be universal and the results (bluntly) meaningless except in a fictional setting, the same principles apply in all cases.
+
+
