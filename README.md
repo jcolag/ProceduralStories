@@ -20,6 +20,6 @@ There are quite a few ways to procedurally generate interesting information abou
 
 The first pass on character creation is a very, very old concept of mine to use the character's random birthday to generate an astrological profile in the European style.  Despite astrology being pseudoscience, the techniques are mostly straightforward and can be used as if the original classical planets are meaningful as people have thought, extended with modern planets, or use a completely original model of the solar system.  Likewise, the generated content could be vague personality traits or very specific abilities.  Since Kepler's laws of planetary motion are likely to be universal and the results (bluntly) meaningless except in a fictional setting, the same principles apply in all cases.
 
-At heart, `astrochar.ex` is a sort of orrery, attempting to mimic Kepler's laws to track the planets against a background of astrological (or other) signs.
+At heart, `astrochar.ex` is a sort of orrery, attempting to mimic [Kepler's laws](https://en.wikipedia.org/wiki/Kepler's_laws_of_planetary_motion) to track the planets against a background of astrological (or other) signs.
 
 
