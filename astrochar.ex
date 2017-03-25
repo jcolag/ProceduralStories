@@ -3,7 +3,7 @@ defmodule Trait do
 end
 
 defmodule Planet do
-  defstruct id: 0, name: "Planet", centerid: -1, focusangle: 0, focusdist: 0, aradius: 1000000, bradius: 1000000, traitid: 0, positive: true, currangle: 0
+  defstruct id: 0, name: "Planet", mass: 1000000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1000000, bradius: 1000000, traitid: 0, positive: true, currangle: 0
 end
 
 defmodule Element do
