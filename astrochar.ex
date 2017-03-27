@@ -7,9 +7,8 @@ end
 defmodule Planet do
   defstruct id: 0, name: "Planet", mass: 1000000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1000000, bradius: 1000000, traitid: 0, positive: true, currangle: 0
 
-  def period(%Planet{mass: mass, centerid: centerid, aradius: aradius}) do
-    ## Need to replace mass with the parent object's mass
-    2 * pi() * sqrt(aradius * aradius * aradius / mass / 6.67408)
+  def period(%Planet{aradius: aradius}, Planet: parent) do
+    2 * pi() * sqrt(aradius * aradius * aradius / parent.mass / 6.67408)
   end
 end
 
