@@ -32,4 +32,8 @@ defmodule Aspect do
   defstruct id: 0, name: "Aspect", angle: 0, influence: 0
 end
 
+defmodule Orrery do
+  defp init() do
+  end
+end
 
