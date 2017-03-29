@@ -34,6 +34,7 @@ end
 
 defmodule Orrery do
   defp init() do
+    p1 = %Planet{id: 0, name: "Sun", mass: 1988550000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1, bradius: 1, traitid: 0, positive: true, currangle: 0}
   end
 end
 
