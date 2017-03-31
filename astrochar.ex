@@ -5,6 +5,8 @@ defmodule Trait do
 end
 
 defmodule Planet do
+  # Mass is stored in 10^24g
+  # Distances are stored in 10^6m
   defstruct id: 0, name: "Planet", mass: 1000000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1000000, bradius: 1000000, traitid: 0, positive: true, currangle: 0
 
   def period(%Planet{aradius: aradius}, Planet: parent) do
