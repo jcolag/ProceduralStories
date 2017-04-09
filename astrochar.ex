@@ -46,11 +46,11 @@ defmodule Orrery do
     p8 = %Planet{id: 7, name: "Saturn", mass: 568510, centerid: 0, focusangle: 0, focusdist: 0, aradius: 1429000, eccentricity: 0.05415060, traitid: 0, positive: true, currangle: 0}
     p9 = %Planet{id: 8, name: "Uranus", mass: 868490, centerid: 0, focusangle: 0, focusdist: 0, aradius: 2875040, eccentricity: 0.04716771, traitid: 0, positive: true, currangle: 0}
     p10 = %Planet{id: 9, name: "Neptune", mass: 1024400, centerid: 0, focusangle: 0, focusdist: 0, aradius: 4504450, eccentricity: 0.04716771, traitid: 0, positive: true, currangle: 0}
-    p11 = %Planet{id: 9, name: "Ceres", mass: 1, centerid: 0, focusangle: 0, focusdist: 0, aradius: 414010, eccentricity: 0.080, traitid: 0, positive: true, currangle: 0}
-    p12 = %Planet{id: 9, name: "Pluto", mass: 13, centerid: 0, focusangle: 0, focusdist: 0, aradius: 5906380, eccentricity: 0.24880766, traitid: 0, positive: true, currangle: 0}
-    p13 = %Planet{id: 9, name: "Haumea", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6465000000, eccentricity: 0.18874, traitid: 0, positive: true, currangle: 0}
-    p14 = %Planet{id: 9, name: "Makemake", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6838872, eccentricity: 0.159, traitid: 0, positive: true, currangle: 0}
-    p15 = %Planet{id: 9, name: "Eris", mass: 17, centerid: 0, focusangle: 0, focusdist: 0, aradius: 10166000, eccentricity: 0.44177, traitid: 0, positive: true, currangle: 0}
+    p11 = %Planet{id: 10, name: "Ceres", mass: 1, centerid: 0, focusangle: 0, focusdist: 0, aradius: 414010, eccentricity: 0.080, traitid: 0, positive: true, currangle: 0}
+    p12 = %Planet{id: 11, name: "Pluto", mass: 13, centerid: 0, focusangle: 0, focusdist: 0, aradius: 5906380, eccentricity: 0.24880766, traitid: 0, positive: true, currangle: 0}
+    p13 = %Planet{id: 12, name: "Haumea", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6465000000, eccentricity: 0.18874, traitid: 0, positive: true, currangle: 0}
+    p14 = %Planet{id: 13, name: "Makemake", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6838872, eccentricity: 0.159, traitid: 0, positive: true, currangle: 0}
+    p15 = %Planet{id: 14, name: "Eris", mass: 17, centerid: 0, focusangle: 0, focusdist: 0, aradius: 10166000, eccentricity: 0.44177, traitid: 0, positive: true, currangle: 0}
   end
 end
 
