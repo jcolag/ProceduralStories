@@ -51,6 +51,11 @@ defmodule Orrery do
     p13 = %Planet{id: 12, name: "Haumea", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6465000000, eccentricity: 0.18874, traitid: 0, positive: true, currangle: 0}
     p14 = %Planet{id: 13, name: "Makemake", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6838872, eccentricity: 0.159, traitid: 0, positive: true, currangle: 0}
     p15 = %Planet{id: 14, name: "Eris", mass: 17, centerid: 0, focusangle: 0, focusdist: 0, aradius: 10166000, eccentricity: 0.44177, traitid: 0, positive: true, currangle: 0}
+
+    e1 = %Element{id: 0, name: "Earth"}
+    e2 = %Element{id: 1, name: "Fire"}
+    e3 = %Element{id: 2, name: "Water"}
+    e4 = %Element{id: 3, name: "Air"}
   end
 end
 
