@@ -56,6 +56,19 @@ defmodule Orrery do
     e2 = %Element{id: 1, name: "Fire"}
     e3 = %Element{id: 2, name: "Water"}
     e4 = %Element{id: 3, name: "Air"}
+
+    c1 = %Constellation{id: 0, name: "Aries", angle: 0, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c2 = %Constellation{id: 0, name: "Taurus", angle: 30, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c3 = %Constellation{id: 0, name: "Gemini", angle: 60, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c4 = %Constellation{id: 0, name: "Cancer", angle: 90, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c5 = %Constellation{id: 0, name: "Leo", angle: 120, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c6 = %Constellation{id: 0, name: "Virgo", angle: 150, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c7 = %Constellation{id: 0, name: "Libra", angle: 180, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c8 = %Constellation{id: 0, name: "Scorpio", angle: 210, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c9 = %Constellation{id: 0, name: "Sagittarius", angle: 240, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c10 = %Constellation{id: 0, name: "Capricorn", angle: 270, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c11 = %Constellation{id: 0, name: "Aquarius", angle: 300, traitid: 0, positive: true, elementid: 0, qualityid: 0}
+    c12 = %Constellation{id: 0, name: "Pisces", angle: 330, traitid: 0, positive: true, elementid: 0, qualityid: 0}
   end
 end
 
