@@ -56,6 +56,10 @@ defmodule Orrery do
     e2 = %Element{id: 1, name: "Fire"}
     e3 = %Element{id: 2, name: "Water"}
     e4 = %Element{id: 3, name: "Air"}
+    
+    q1 = %Quality{id: 0, name: "Cardinal"}
+    q1 = %Quality{id: 1, name: "Fixed"}
+    q1 = %Quality{id: 2, name: "Mutable"}
 
     c1 = %Constellation{id: 0, name: "Aries", angle: 0, traitid: 0, positive: true, elementid: 0, qualityid: 0}
     c2 = %Constellation{id: 1, name: "Taurus", angle: 30, traitid: 0, positive: true, elementid: 0, qualityid: 0}
