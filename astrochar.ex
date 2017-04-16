@@ -4,6 +4,10 @@ defmodule Trait do
   defstruct id: 0, name: "Trait", negname: "Antitrait"
 end
 
+defmodule Effect do
+  defstruct id: 0, name: "Effect"
+end
+
 defmodule Planet do
   # Mass is stored in 10^24g
   # Distances are stored in 10^6m
