@@ -8,6 +8,10 @@ defmodule Effect do
   defstruct id: 0, name: "Effect"
 end
 
+defmodule Event do
+  defstruct id: 0, name: "Event"
+end
+
 defmodule Planet do
   # Mass is stored in 10^24g
   # Distances are stored in 10^6m
