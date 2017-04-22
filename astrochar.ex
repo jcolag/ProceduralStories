@@ -77,18 +77,18 @@ defmodule Orrery do
     t1 = %Trait{id: 5, name: "Jovial"}
     t1 = %Trait{id: 6, name: "Wise"}
 
-    c1 = %Constellation{id: 0, name: "Aries", angle: 0, traitid: 0, positive: true, elementid: 1, qualityid: 0}
-    c2 = %Constellation{id: 1, name: "Taurus", angle: 30, traitid: 0, positive: true, elementid: 0, qualityid: 1}
-    c3 = %Constellation{id: 2, name: "Gemini", angle: 60, traitid: 0, positive: true, elementid: 3, qualityid: 2}
-    c4 = %Constellation{id: 3, name: "Cancer", angle: 90, traitid: 0, positive: true, elementid: 2, qualityid: 0}
+    c1 = %Constellation{id: 0, name: "Aries", angle: 0, traitid: 4, positive: true, elementid: 1, qualityid: 0}
+    c2 = %Constellation{id: 1, name: "Taurus", angle: 30, traitid: 3, positive: true, elementid: 0, qualityid: 1}
+    c3 = %Constellation{id: 2, name: "Gemini", angle: 60, traitid: 2, positive: true, elementid: 3, qualityid: 2}
+    c4 = %Constellation{id: 3, name: "Cancer", angle: 90, traitid: 1, positive: true, elementid: 2, qualityid: 0}
     c5 = %Constellation{id: 4, name: "Leo", angle: 120, traitid: 0, positive: true, elementid: 1, qualityid: 1}
-    c6 = %Constellation{id: 5, name: "Virgo", angle: 150, traitid: 0, positive: true, elementid: 0, qualityid: 2}
-    c7 = %Constellation{id: 6, name: "Libra", angle: 180, traitid: 0, positive: true, elementid: 3, qualityid: 0}
-    c8 = %Constellation{id: 7, name: "Scorpio", angle: 210, traitid: 0, positive: true, elementid: 2, qualityid: 1}
-    c9 = %Constellation{id: 8, name: "Sagittarius", angle: 240, traitid: 0, positive: true, elementid: 1, qualityid: 2}
-    c10 = %Constellation{id: 9, name: "Capricorn", angle: 270, traitid: 0, positive: true, elementid: 0, qualityid: 0}
-    c11 = %Constellation{id: 10, name: "Aquarius", angle: 300, traitid: 0, positive: true, elementid: 3, qualityid: 1}
-    c12 = %Constellation{id: 11, name: "Pisces", angle: 330, traitid: 0, positive: true, elementid: 2, qualityid: 2}
+    c6 = %Constellation{id: 5, name: "Virgo", angle: 150, traitid: 2, positive: true, elementid: 0, qualityid: 2}
+    c7 = %Constellation{id: 6, name: "Libra", angle: 180, traitid: 3, positive: true, elementid: 3, qualityid: 0}
+    c8 = %Constellation{id: 7, name: "Scorpio", angle: 210, traitid: 4, positive: true, elementid: 2, qualityid: 1}
+    c9 = %Constellation{id: 8, name: "Sagittarius", angle: 240, traitid: 5, positive: true, elementid: 1, qualityid: 2}
+    c10 = %Constellation{id: 9, name: "Capricorn", angle: 270, traitid: 6, positive: true, elementid: 0, qualityid: 0}
+    c11 = %Constellation{id: 10, name: "Aquarius", angle: 300, traitid: 6, positive: true, elementid: 3, qualityid: 1}
+    c12 = %Constellation{id: 11, name: "Pisces", angle: 330, traitid: 5, positive: true, elementid: 2, qualityid: 2}
   end
 end
 
