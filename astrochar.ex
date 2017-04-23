@@ -66,8 +66,8 @@ defmodule Orrery do
     e4 = %Element{id: 3, name: "Air"}
     
     q1 = %Quality{id: 0, name: "Cardinal"}
-    q1 = %Quality{id: 1, name: "Fixed"}
-    q1 = %Quality{id: 2, name: "Mutable"}
+    q2 = %Quality{id: 1, name: "Fixed"}
+    q3 = %Quality{id: 2, name: "Mutable"}
     
     t1 = %Trait{id: 0, name: "Gregarious"}
     t1 = %Trait{id: 1, name: "Wandering"}
