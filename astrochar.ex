@@ -70,12 +70,13 @@ defmodule Orrery do
     q3 = %Quality{id: 2, name: "Mutable"}
     
     t1 = %Trait{id: 0, name: "Gregarious"}
-    t1 = %Trait{id: 1, name: "Wandering"}
-    t1 = %Trait{id: 2, name: "Quick"}
-    t1 = %Trait{id: 3, name: "Charismatic"}
-    t1 = %Trait{id: 4, name: "Assertive"}
-    t1 = %Trait{id: 5, name: "Jovial"}
-    t1 = %Trait{id: 6, name: "Wise"}
+    t2 = %Trait{id: 1, name: "Wandering"}
+    t3 = %Trait{id: 2, name: "Quick"}
+    t4 = %Trait{id: 3, name: "Charismatic"}
+    t5 = %Trait{id: 4, name: "Assertive"}
+    t6 = %Trait{id: 5, name: "Jovial"}
+    t7 = %Trait{id: 6, name: "Wise"}
+    
 
     c1 = %Constellation{id: 0, name: "Aries", angle: 0, traitid: 4, positive: true, elementid: 1, qualityid: 0}
     c2 = %Constellation{id: 1, name: "Taurus", angle: 30, traitid: 3, positive: true, elementid: 0, qualityid: 1}
