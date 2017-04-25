@@ -77,6 +77,18 @@ defmodule Orrery do
     t6 = %Trait{id: 5, name: "Jovial"}
     t7 = %Trait{id: 6, name: "Wise"}
     
+    f1 = %Effect{id: 0, name: "Fortune"}
+    f2 = %Effect{id: 1, name: "Travel"}
+    f3 = %Effect{id: 2, name: "Rapid Change"}
+    f4 = %Effect{id: 3, name: "Luck"}
+    f5 = %Effect{id: 4, name: "Conflict"}
+    f6 = %Effect{id: 5, name: "Fortune"}
+    f7 = %Effect{id: 6, name: "Bad Luck"}
+    f8 = %Effect{id: 7, name: "Disruption"}
+    f9 = %Effect{id: 8, name: "Confusion"}
+    f10 = %Effect{id: 9, name: "Transformation"}
+    f11 = %Effect{id: 10, name: "Compassion"}
+    
 
     c1 = %Constellation{id: 0, name: "Aries", angle: 0, traitid: 4, positive: true, elementid: 1, qualityid: 0}
     c2 = %Constellation{id: 1, name: "Taurus", angle: 30, traitid: 3, positive: true, elementid: 0, qualityid: 1}
