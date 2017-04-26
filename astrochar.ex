@@ -89,6 +89,12 @@ defmodule Orrery do
     f10 = %Effect{id: 9, name: "Transformation"}
     f11 = %Effect{id: 10, name: "Compassion"}
     
+    v1 = %Event{id: 0, name: "Action"}
+    v2 = %Event{id: 1, name: "Fortunate Events"}
+    v3 = %Event{id: 2, name: "War"}
+    v4 = %Event{id: 3, name: "Prosperity"}
+    v5 = %Event{id: 4, name: "Disaster"}
+    v6 = %Event{id: 5, name: "Innovation"}
 
     c1 = %Constellation{id: 0, name: "Aries", angle: 0, traitid: 4, positive: true, elementid: 1, qualityid: 0}
     c2 = %Constellation{id: 1, name: "Taurus", angle: 30, traitid: 3, positive: true, elementid: 0, qualityid: 1}
