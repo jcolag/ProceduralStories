@@ -95,6 +95,14 @@ defmodule Orrery do
     v4 = %Event{id: 3, name: "Prosperity"}
     v5 = %Event{id: 4, name: "Disaster"}
     v6 = %Event{id: 5, name: "Innovation"}
+    
+    l1 = %Element{id: 0, name: "Gold"}
+    l2 = %Element{id: 1, name: "Silver"}
+    l3 = %Element{id: 2, name: "Mercury"}
+    l4 = %Element{id: 3, name: "Copper"}
+    l5 = %Element{id: 4, name: "Iron"}
+    l6 = %Element{id: 5, name: "Tin"}
+    l7 = %Element{id: 6, name: "Lead"}
 
     c1 = %Constellation{id: 0, name: "Aries", angle: 0, traitid: 4, positive: true, elementid: 1, qualityid: 0}
     c2 = %Constellation{id: 1, name: "Taurus", angle: 30, traitid: 3, positive: true, elementid: 0, qualityid: 1}
