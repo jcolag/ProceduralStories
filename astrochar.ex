@@ -44,21 +44,21 @@ end
 
 defmodule Orrery do
   defp init() do
-    p1 = %Planet{id: 0, name: "Sun", mass: 1988550000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1, eccentricity: 0, traitid: 0, effectid: 0, eventid: -1, positive: true, currangle: 0}
-    p2 = %Planet{id: 1, name: "Mercury", mass: 330, centerid: 0, focusangle: 0, focusdist: 0, aradius: 57909, eccentricity: 0.20563069, traitid: 2, effectid: 2, eventid: -1, positive: true, currangle: 0}
-    p3 = %Planet{id: 2, name: "Venus", mass: 4868, centerid: 0, focusangle: 0, focusdist: 0, aradius: 108208, eccentricity: 0.00677323, traitid: 3, effectid: 3, eventid: -1, positive: true, currangle: 0}
-    p4 = %Planet{id: 3, name: "Earth", mass: 5972, centerid: 0, focusangle: 0, focusdist: 0, aradius: 149598, eccentricity: 0.01671022, traitid: 0, effectid: -1, eventid: -1, positive: true, currangle: 0}
-    p5 = %Planet{id: 4, name: "Moon", mass: 73, centerid: 1, focusangle: 0, focusdist: 0, aradius: 385, eccentricity: 0.0549, traitid: 1, effectid: 3, eventid: -1, positive: true, currangle: 0}
-    p6 = %Planet{id: 5, name: "Mars", mass: 641, centerid: 0, focusangle: 0, focusdist: 0, aradius: 227939, eccentricity: 0.09341233, traitid: 4, effectid: 4, eventid: -1, positive: true, currangle: 0}
-    p7 = %Planet{id: 6, name: "Jupiter", mass: 1898700, centerid: 0, focusangle: 0, focusdist: 0, aradius: 778299, eccentricity: 0.04839266, traitid: 5, effectid: 5, eventid: -1, positive: true, currangle: 0}
-    p8 = %Planet{id: 7, name: "Saturn", mass: 568510, centerid: 0, focusangle: 0, focusdist: 0, aradius: 1429000, eccentricity: 0.05415060, traitid: 6, effectid: 6, eventid: -1, positive: true, currangle: 0}
-    p9 = %Planet{id: 8, name: "Uranus", mass: 868490, centerid: 0, focusangle: 0, focusdist: 0, aradius: 2875040, eccentricity: 0.04716771, traitid: -1, effectid: 7, eventid: -1, positive: true, currangle: 0}
-    p10 = %Planet{id: 9, name: "Neptune", mass: 1024400, centerid: 0, focusangle: 0, focusdist: 0, aradius: 4504450, eccentricity: 0.04716771, traitid: -1, effectid: 8, eventid: -1, positive: true, currangle: 0}
-    p11 = %Planet{id: 10, name: "Ceres", mass: 1, centerid: 0, focusangle: 0, focusdist: 0, aradius: 414010, eccentricity: 0.080, traitid: -1, effectid: 10, eventid: -1, positive: true, currangle: 0}
-    p12 = %Planet{id: 11, name: "Pluto", mass: 13, centerid: 0, focusangle: 0, focusdist: 0, aradius: 5906380, eccentricity: 0.24880766, traitid: -1, effectid: 9, eventid: -1, positive: true, currangle: 0}
-    p13 = %Planet{id: 12, name: "Haumea", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6465000000, eccentricity: 0.18874, traitid: -1, effectid: -1, eventid: -1, positive: true, currangle: 0}
-    p14 = %Planet{id: 13, name: "Makemake", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6838872, eccentricity: 0.159, traitid: -1, effectid: -1, eventid: -1, positive: true, currangle: 0}
-    p15 = %Planet{id: 14, name: "Eris", mass: 17, centerid: 0, focusangle: 0, focusdist: 0, aradius: 10166000, eccentricity: 0.44177, traitid: -1, effectid: -1, eventid: -1, positive: true, currangle: 0}
+    p1 = %Planet{id: 0, name: "Sun", mass: 1988550000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1, eccentricity: 0, traitid: 0, effectid: 0, eventid: -1, elementid: 0, positive: true, currangle: 0}
+    p2 = %Planet{id: 1, name: "Mercury", mass: 330, centerid: 0, focusangle: 0, focusdist: 0, aradius: 57909, eccentricity: 0.20563069, traitid: 2, effectid: 2, eventid: 2, elementid: -1, positive: true, currangle: 0}
+    p3 = %Planet{id: 2, name: "Venus", mass: 4868, centerid: 0, focusangle: 0, focusdist: 0, aradius: 108208, eccentricity: 0.00677323, traitid: 3, effectid: 3, eventid: -1, elementid: 3, positive: true, currangle: 0}
+    p4 = %Planet{id: 3, name: "Earth", mass: 5972, centerid: 0, focusangle: 0, focusdist: 0, aradius: 149598, eccentricity: 0.01671022, traitid: 0, effectid: -1, eventid: -1, elementid: -1, positive: true, currangle: 0}
+    p5 = %Planet{id: 4, name: "Moon", mass: 73, centerid: 1, focusangle: 0, focusdist: 0, aradius: 385, eccentricity: 0.0549, traitid: 1, effectid: 3, eventid: -1, elementid: 1, positive: true, currangle: 0}
+    p6 = %Planet{id: 5, name: "Mars", mass: 641, centerid: 0, focusangle: 0, focusdist: 0, aradius: 227939, eccentricity: 0.09341233, traitid: 4, effectid: 4, eventid: -1, elementid: 4, positive: true, currangle: 0}
+    p7 = %Planet{id: 6, name: "Jupiter", mass: 1898700, centerid: 0, focusangle: 0, focusdist: 0, aradius: 778299, eccentricity: 0.04839266, traitid: 5, effectid: 5, eventid: 5, elementid: -1, positive: true, currangle: 0}
+    p8 = %Planet{id: 7, name: "Saturn", mass: 568510, centerid: 0, focusangle: 0, focusdist: 0, aradius: 1429000, eccentricity: 0.05415060, traitid: 6, effectid: 6, eventid: 6, elementid: -1, positive: true, currangle: 0}
+    p9 = %Planet{id: 8, name: "Uranus", mass: 868490, centerid: 0, focusangle: 0, focusdist: 0, aradius: 2875040, eccentricity: 0.04716771, traitid: -1, effectid: 7, eventid: -1, elementid: -1, positive: true, currangle: 0}
+    p10 = %Planet{id: 9, name: "Neptune", mass: 1024400, centerid: 0, focusangle: 0, focusdist: 0, aradius: 4504450, eccentricity: 0.04716771, traitid: -1, effectid: 8, eventid: -1, elementid: -1, positive: true, currangle: 0}
+    p11 = %Planet{id: 10, name: "Ceres", mass: 1, centerid: 0, focusangle: 0, focusdist: 0, aradius: 414010, eccentricity: 0.080, traitid: -1, effectid: 10, eventid: -1, elementid: -1, positive: true, currangle: 0}
+    p12 = %Planet{id: 11, name: "Pluto", mass: 13, centerid: 0, focusangle: 0, focusdist: 0, aradius: 5906380, eccentricity: 0.24880766, traitid: -1, effectid: 9, eventid: -1, elementid: -1, positive: true, currangle: 0}
+    p13 = %Planet{id: 12, name: "Haumea", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6465000000, eccentricity: 0.18874, traitid: -1, effectid: -1, eventid: -1, elementid: -1, positive: true, currangle: 0}
+    p14 = %Planet{id: 13, name: "Makemake", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6838872, eccentricity: 0.159, traitid: -1, effectid: -1, eventid: -1, elementid: -1, positive: true, currangle: 0}
+    p15 = %Planet{id: 14, name: "Eris", mass: 17, centerid: 0, focusangle: 0, focusdist: 0, aradius: 10166000, eccentricity: 0.44177, traitid: -1, effectid: -1, eventid: -1, elementid: -1, positive: true, currangle: 0}
 
     e1 = %Element{id: 0, name: "Earth"}
     e2 = %Element{id: 1, name: "Fire"}
