@@ -63,15 +63,18 @@ defmodule Orrery do
     p13 = %Planet{id: 12, name: "Haumea", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6465000000, eccentricity: 0.18874, traitid: -1, effectid: -1, eventid: -1, metalid: -1, positive: true, currangle: 0}
     p14 = %Planet{id: 13, name: "Makemake", mass: 4, centerid: 0, focusangle: 0, focusdist: 0, aradius: 6838872, eccentricity: 0.159, traitid: -1, effectid: -1, eventid: -1, metalid: -1, positive: true, currangle: 0}
     p15 = %Planet{id: 14, name: "Eris", mass: 17, centerid: 0, focusangle: 0, focusdist: 0, aradius: 10166000, eccentricity: 0.44177, traitid: -1, effectid: -1, eventid: -1, metalid: -1, positive: true, currangle: 0}
+    planets = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15]
 
     e1 = %Element{id: 0, name: "Earth"}
     e2 = %Element{id: 1, name: "Fire"}
     e3 = %Element{id: 2, name: "Water"}
     e4 = %Element{id: 3, name: "Air"}
+    elements = [e1, e2, e3, e4]
     
     q1 = %Quality{id: 0, name: "Cardinal"}
     q2 = %Quality{id: 1, name: "Fixed"}
     q3 = %Quality{id: 2, name: "Mutable"}
+    qualities = [q1, q2, q3]
     
     t1 = %Trait{id: 0, name: "Gregarious"}
     t2 = %Trait{id: 1, name: "Wandering"}
@@ -80,6 +83,7 @@ defmodule Orrery do
     t5 = %Trait{id: 4, name: "Assertive"}
     t6 = %Trait{id: 5, name: "Jovial"}
     t7 = %Trait{id: 6, name: "Wise"}
+    traits = [t1, t2, t3, t4, t5, t6, t7]
     
     f1 = %Effect{id: 0, name: "Fortune"}
     f2 = %Effect{id: 1, name: "Travel"}
@@ -92,6 +96,7 @@ defmodule Orrery do
     f9 = %Effect{id: 8, name: "Confusion"}
     f10 = %Effect{id: 9, name: "Transformation"}
     f11 = %Effect{id: 10, name: "Compassion"}
+    effects = [f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11]
     
     v1 = %Event{id: 0, name: "Action"}
     v2 = %Event{id: 1, name: "Fortunate Events"}
@@ -99,6 +104,7 @@ defmodule Orrery do
     v4 = %Event{id: 3, name: "Prosperity"}
     v5 = %Event{id: 4, name: "Disaster"}
     v6 = %Event{id: 5, name: "Innovation"}
+    events = [v1, v2, v3, v4, v5, v6]
     
     l1 = %Metal{id: 0, name: "Gold"}
     l2 = %Metal{id: 1, name: "Silver"}
@@ -107,6 +113,7 @@ defmodule Orrery do
     l5 = %Metal{id: 4, name: "Iron"}
     l6 = %Metal{id: 5, name: "Tin"}
     l7 = %Metal{id: 6, name: "Lead"}
+    metals = [l1, l2, l3, l4, l5, l6, l7]
 
     c1 = %Constellation{id: 0, name: "Aries", angle: 0, traitid: 4, positive: true, elementid: 1, qualityid: 0}
     c2 = %Constellation{id: 1, name: "Taurus", angle: 30, traitid: 3, positive: true, elementid: 0, qualityid: 1}
@@ -120,6 +127,7 @@ defmodule Orrery do
     c10 = %Constellation{id: 9, name: "Capricorn", angle: 270, traitid: 6, positive: true, elementid: 0, qualityid: 0}
     c11 = %Constellation{id: 10, name: "Aquarius", angle: 300, traitid: 6, positive: true, elementid: 3, qualityid: 1}
     c12 = %Constellation{id: 11, name: "Pisces", angle: 330, traitid: 5, positive: true, elementid: 2, qualityid: 2}
+    constellations = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12]
   end
 end
 
