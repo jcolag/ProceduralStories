@@ -15,7 +15,7 @@ end
 defmodule Planet do
   # Mass is stored in 10^24g
   # Distances are stored in 10^6m
-  defstruct id: 0, name: "Planet", mass: 1000000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1000000, eccentricity: 0, traitid: -1, effectid: -1, eventid: -1, elementid: -1, positive: true, currangle: 0
+  defstruct id: 0, name: "Planet", mass: 1000000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1000000, eccentricity: 0, traitid: -1, effectid: -1, eventid: -1, metalid: -1, positive: true, currangle: 0
 
   def period(%Planet{aradius: aradius}, Planet: parent) do
     sqrt(aradius * aradius * aradius / parent.mass / 6.67408) * 0.73048
