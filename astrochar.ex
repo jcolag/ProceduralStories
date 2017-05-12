@@ -20,6 +20,12 @@ defmodule Planet do
   def period(%Planet{aradius: aradius}, Planet: parent) do
     sqrt(aradius * aradius * aradius / parent.mass / 6.67408) * 0.73048
   end
+
+  def position(Planet: planet, Integer: day) do
+    p = Planet.period(planet)
+    left = rem(day, p)
+    left * 360 / p
+  end
 end
 
 defmodule Element do
