@@ -151,5 +151,17 @@ defmodule Orrery do
       byIndex(tail, id)
     end
   end
+  
+  defp byName([], _) do
+    nil
+  end
+  
+  defp byName([head|tail], name) do
+    if head.name == name do
+      head
+    else
+      byIndex(tail, name)
+    end
+  end
 end
 
