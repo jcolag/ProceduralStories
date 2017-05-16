@@ -163,5 +163,14 @@ defmodule Orrery do
       byIndex(tail, name)
     end
   end
+  
+  defp allCenters(Planet: planet) do
+    parent = byIndex(Orrery.planets, planet.parentid)
+    [planet.id | allCenters(Orrery.planets, parent)]
+  end
+  
+  defp allCenters(nil) do
+    []
+  end
 end
 
