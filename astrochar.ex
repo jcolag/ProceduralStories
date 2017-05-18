@@ -57,9 +57,9 @@ defmodule Position do
 end
 
 defmodule Orrery do
-  defp init() do
-  defstruct planets: [], elements: []
+  defstruct planets: [], elements: [], qualities: [], qualities: [], traits: [], effects: [], events: [], metals: [], constellations: []
 
+  defp init() do
     p1 = %Planet{id: 0, name: "Sun", mass: 1988550000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1, eccentricity: 0, traitid: 0, effectid: 0, eventid: -1, metalid: 0, positive: true, currangle: 0}
     p2 = %Planet{id: 1, name: "Mercury", mass: 330, centerid: 0, focusangle: 0, focusdist: 0, aradius: 57909, eccentricity: 0.20563069, traitid: 2, effectid: 2, eventid: 2, metalid: -1, positive: true, currangle: 0}
     p3 = %Planet{id: 2, name: "Venus", mass: 4868, centerid: 0, focusangle: 0, focusdist: 0, aradius: 108208, eccentricity: 0.00677323, traitid: 3, effectid: 3, eventid: -1, metalid: 3, positive: true, currangle: 0}
@@ -140,6 +140,8 @@ defmodule Orrery do
     c11 = %Constellation{id: 10, name: "Aquarius", angle: 300, traitid: 6, positive: true, elementid: 3, qualityid: 1}
     c12 = %Constellation{id: 11, name: "Pisces", angle: 330, traitid: 5, positive: true, elementid: 2, qualityid: 2}
     constellations = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12]
+    
+    %Orrery {planets: planets, elements: elements, qualities: qualities, qualities: qualities, traits: traits, effects: effects, events: events, metals: metals, constellations: constellations}
   end
   
   defp byIndex([], _) do
