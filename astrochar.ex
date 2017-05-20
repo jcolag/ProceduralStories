@@ -164,7 +164,7 @@ defmodule Orrery do
     if head.name == name do
       head
     else
-      byIndex(tail, name)
+      byName(tail, name)
     end
   end
   
