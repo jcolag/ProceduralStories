@@ -175,5 +175,10 @@ defmodule Orrery do
   def allCenters([], _) do
     []
   end
+  
+  def allCenters(planets, planet) do
+    parent = byIndex(planets, planet.centerid)
+    [planet | allCenters(planets, parent)]
+  end
 end
 
