@@ -180,5 +180,13 @@ defmodule Orrery do
     parent = byIndex(planets, planet.centerid)
     [planet | allCenters(planets, parent)]
   end
+  
+  def trimCommonPrefix([], [head|tail]) do
+    [head|tail]
+  end
+  
+  def trimCommonPrefix([head|tail], []) do
+    [head|tail]
+  end
 end
 
