@@ -188,5 +188,14 @@ defmodule Orrery do
   def trimCommonPrefix([head|tail], []) do
     [head|tail]
   end
+  
+  def trimCommonPrefix([head1|tail1], [head2|tail2]) do
+    IO.puts head1.name <> " =?= " <> head2.name
+    if head1 == head2 do
+      trimCommonPrefix(tail1, tail2)
+    else
+      [ [head1|tail1], [head2|tail2] ]
+    end
+  end
 end
 
