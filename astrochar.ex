@@ -197,5 +197,11 @@ defmodule Orrery do
       [ [head1|tail1], [head2|tail2] ]
     end
   end
+  
+  def commonCenter(planets, p1, p2) do
+    l1 = Enum.reverse(allCenters(planets, p1))
+    l2 = Enum.reverse(allCenters(planets, p2))
+    trimCommonPrefix(l1, l2)
+  end
 end
 
