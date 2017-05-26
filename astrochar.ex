@@ -203,5 +203,9 @@ defmodule Orrery do
     l2 = Enum.reverse(allCenters(planets, p2))
     trimCommonPrefix(l1, l2)
   end
+  
+  def go() do
+    orrery = init()
+  end
 end
 
