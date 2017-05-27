@@ -209,3 +209,5 @@ defmodule Orrery do
   end
 end
 
+Orrery.go()
+
