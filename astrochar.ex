@@ -204,10 +204,11 @@ defmodule Orrery do
     trimCommonPrefix(l1, l2)
   end
   
-  def go() do
+  def go(homeName) do
     orrery = init()
+    home = byName(planets, homeName)
   end
 end
 
-Orrery.go()
+Orrery.go("Mars")
 
