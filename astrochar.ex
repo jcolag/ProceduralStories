@@ -206,9 +206,10 @@ defmodule Orrery do
   
   def go(homeName) do
     orrery = init()
+    planets = orrery.planets
     home = byName(planets, homeName)
   end
 end
 
-Orrery.go("Mars")
+Orrery.go("Earth")
 
