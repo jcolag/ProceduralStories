@@ -181,6 +181,10 @@ defmodule Orrery do
     [planet | allCenters(planets, parent)]
   end
   
+  def trimCommonPrefix([], []) do
+    []
+  end
+  
   def trimCommonPrefix([], [head|tail]) do
     [head|tail]
   end
