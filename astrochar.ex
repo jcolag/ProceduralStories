@@ -21,7 +21,7 @@ defmodule Planet do
     sqrt(aradius * aradius * aradius / parent.mass / 6.67408) * 0.73048
   end
 
-  def position(Planet: planet, Integer: day) do
+  def getAngle(Planet: planet, Integer: day) do
     p = Planet.getPeriod(planet)
     left = rem(day, p)
     left * 360 / p
