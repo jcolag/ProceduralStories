@@ -29,7 +29,7 @@ defmodule Planet do
   def getAngle(planet, parent, day) do
     p = trunc(Planet.getPeriod(planet, parent))
     left = rem(day, p)
-    left * 360 / p
+    left * 2 * pi / p
   end
 end
 
