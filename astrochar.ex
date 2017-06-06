@@ -149,11 +149,11 @@ defmodule Orrery do
     %Orrery {planets: planets, elements: elements, qualities: qualities, qualities: qualities, traits: traits, effects: effects, events: events, metals: metals, constellations: constellations}
   end
   
-  defp byIndex([], _) do
+  def byIndex([], _) do
     nil
   end
   
-  defp byIndex([head|tail], id) do
+  def byIndex([head|tail], id) do
     if head.id == id do
       head
     else
