@@ -58,7 +58,7 @@ defmodule Aspect do
 end
 
 defmodule Position do
-  defstruct planetid: -1, absangle: 0, relangle: 0
+  defstruct id: -1, x: 0, y: 0
 end
 
 defmodule Orrery do
