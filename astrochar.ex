@@ -59,6 +59,13 @@ end
 
 defmodule Position do
   defstruct id: -1, x: 0, y: 0
+  
+  def changeTo(position, planet, day) do
+    angle = Planet.getAngle(planet, day)
+    x = Math.cos(angle) * planet.aradius
+    y = Math.sin(angle) * planet.aradius
+    %Position{id: position.id, x: position.x + x, y: position.y + y}
+  end
 end
 
 defmodule Orrery do
