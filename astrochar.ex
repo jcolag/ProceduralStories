@@ -219,7 +219,16 @@ defmodule Orrery do
     trimCommonPrefix(l1, l2)
   end
   
-  def go(homeName) do
+  def getPosition(planets, planet, day) do
+    r = planet.aradius
+    parent = byIndex(planets, planet.centerid)
+    angle = Planet.getAngle(planet, parent, day)
+    x = r * cos(angle)
+    y = r * sin(angle)
+    %Position{id: planet.id, x: x, y: y}
+  end
+  
+  def go(homeName, day) do
     orrery = init()
     planets = orrery.planets
     home = byName(planets, homeName)
