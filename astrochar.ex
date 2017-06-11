@@ -232,6 +232,9 @@ defmodule Orrery do
     orrery = init()
     planets = orrery.planets
     home = byName(planets, homeName)
+    centers = Enum.map(planets, fn p -> commonCenter(planets, p, home) end)
+    positions = Enum.map(planets, fn p -> getPosition(planets, p, day) end)
+    IO.inspect positions
   end
 end
 
