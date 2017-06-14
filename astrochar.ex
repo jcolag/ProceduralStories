@@ -223,8 +223,15 @@ defmodule Orrery do
     r = planet.aradius
     parent = byIndex(planets, planet.centerid)
     angle = Planet.getAngle(planet, parent, day)
-    x = r * cos(angle)
-    y = r * sin(angle)
+    parPos =
+      cond do
+        parent == nil ->
+          %Position{x: 0, y: 0}
+        true ->
+          getPosition(planets, parent, day)
+    end
+    x = r * cos(angle) + parPos.x
+    y = r * sin(angle) + parPos.y
     %Position{id: planet.id, x: x, y: y}
   end
   
