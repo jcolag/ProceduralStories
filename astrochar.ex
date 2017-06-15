@@ -235,6 +235,25 @@ defmodule Orrery do
     %Position{id: planet.id, x: x, y: y}
   end
   
+  def getRelativeAngle(from, to) do
+    dx = from.x - to.x
+    cond do
+      dx == 0 ->
+        %Angle{id: to.id, angle: 0}
+      true ->
+        dy = from.y - to.y
+        tan = dy / dx
+        angle = atan(tan)
+        angle = cond do
+          angle < 0 ->
+            angle + 2 * pi()
+          true ->
+            angle
+        end
+        %Angle{id: to.id, angle: angle / pi() * 180}
+    end
+  end
+  
   def go(homeName, day) do
     orrery = init()
     planets = orrery.planets
