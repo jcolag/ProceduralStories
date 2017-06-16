@@ -254,6 +254,14 @@ defmodule Orrery do
     end
   end
   
+  def angleDiff(a1, a2) do
+    d1 = trunc a1 - a2 + 360
+    d1 = rem d1, 360
+    d2 = trunc a2 - a1 + 360
+    d2 = rem d2, 360
+    min d1, d2
+  end
+  
   def go(homeName, day) do
     orrery = init()
     planets = orrery.planets
