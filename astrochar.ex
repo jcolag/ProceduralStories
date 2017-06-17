@@ -262,6 +262,20 @@ defmodule Orrery do
     min d1, d2
   end
   
+  def findSign(constellations, angle) do
+    ordered = Enum.sort(constellations, &(angleDiff(angle, &1.angle) >= angleDiff(angle, &2.angle)))
+    sign = Enum.at(Enum.reverse(ordered), 0)
+    dt = angleDiff(angle, sign.angle)
+    dt =
+      cond do
+        angle < sign.angle || angle > sign.angle + 180 ->
+          - dt
+        true ->
+          dt
+      end
+    sign
+  end
+  
   def go(homeName, day) do
     orrery = init()
     planets = orrery.planets
