@@ -276,6 +276,13 @@ defmodule Orrery do
     sign
   end
   
+  def describeSign(orrery, sign) do
+    trait = byIndex(orrery.traits, sign.traitid)
+    element = byIndex(orrery.elements, sign.elementid)
+    quality = byIndex(orrery.qualities, sign.qualityid)
+    IO.puts sign.name <> ": " <> trait.name <> ", " <> element.name <> ", " <> quality.name
+  end
+  
   def go(homeName, day) do
     orrery = init()
     planets = orrery.planets
