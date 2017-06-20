@@ -283,6 +283,13 @@ defmodule Orrery do
     IO.puts sign.name <> ": " <> trait.name <> ", " <> element.name <> ", " <> quality.name
   end
   
+  def describePlanet(orrery, planet) do
+    trait = byIndex(orrery.traits, planet.traitid) || %Trait{name: "-"}
+    effect = byIndex(orrery.effects, planet.effectid) || %Effect{name: "-"}
+    event = byIndex(orrery.events, planet.eventid) || %Event{name: "-"}
+    metal = byIndex(orrery.metals, planet.metalid) || %Metal{name: "-"}
+  end
+  
   def go(homeName, day) do
     orrery = init()
     planets = orrery.planets
