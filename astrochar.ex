@@ -294,14 +294,10 @@ defmodule Orrery do
     orrery = init()
     planets = orrery.planets
     home = byName(planets, homeName)
-    centers = Enum.map(planets, fn p -> commonCenter(planets, p, home) end)
     positions = Enum.map(planets, fn p -> getPosition(planets, p, day) end)
-    IO.inspect positions
     homePos = byIndex(positions, home.id)
     angles = Enum.map(positions, fn p -> getRelativeAngle(homePos, p) end)
-    IO.inspect angles
     signs = Enum.map(angles, fn a -> findSign(orrery.constellations, a.angle).name end)
-    IO.inspect signs
   end
 end
 
