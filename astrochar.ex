@@ -274,6 +274,7 @@ defmodule Orrery do
           dt
       end
     sign
+    { sign, dt }
   end
   
   def describeSign(orrery, sign) do
