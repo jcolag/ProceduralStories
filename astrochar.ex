@@ -302,10 +302,11 @@ defmodule Orrery do
     orrery = init()
     planets = orrery.planets
     home = byName(planets, homeName)
-    positions = Enum.map(planets, fn p -> getPosition(planets, p, day) end)
-    homePos = byIndex(positions, home.id)
-    angles = Enum.map(positions, fn p -> getRelativeAngle(homePos, p) end)
-    signs = Enum.map(angles, fn a -> findSign(orrery.constellations, a.angle).name end)
+    positions = Enum.map(planets, fn p -> { p, getPosition(planets, p, day) } end)
+    homePos = byIndex(Enum.map(positions, fn {_,p} -> p end), home.id)
+    angles = Enum.map(positions, fn {pl,pos} -> { getRelativeAngle(homePos, pos), pl } end)
+    signs = Enum.map(angles, fn {a,p} -> { findSign(orrery.constellations, a.angle), p } end)
+    Enum.map(signs, fn {{s,_},p} -> describePair(orrery, p, s) end)
   end
 end
 
