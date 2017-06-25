@@ -54,7 +54,7 @@ defmodule Angle do
 end
 
 defmodule Aspect do
-  defstruct id: 0, name: "Aspect", angle: 0, influence: 0
+  defstruct id: 0, name: "Aspect", angle: 0, delta: 0, influence: 0
 end
 
 defmodule Position do
