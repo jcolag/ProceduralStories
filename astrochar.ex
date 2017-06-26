@@ -69,7 +69,7 @@ defmodule Position do
 end
 
 defmodule Orrery do
-  defstruct planets: [], elements: [], qualities: [], qualities: [], traits: [], effects: [], events: [], metals: [], constellations: []
+  defstruct planets: [], elements: [], qualities: [], qualities: [], traits: [], effects: [], events: [], metals: [], constellations: [], aspects: []
 
   defp init() do
     p1 = %Planet{id: 0, name: "Sun", mass: 1988550000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1, eccentricity: 0, traitid: 0, effectid: 0, eventid: -1, metalid: 0, positive: true, currangle: 0}
