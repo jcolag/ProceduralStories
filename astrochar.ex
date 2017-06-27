@@ -154,6 +154,19 @@ defmodule Orrery do
     constellations = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12]
     
     %Orrery {planets: planets, elements: elements, qualities: qualities, traits: traits, effects: effects, events: events, metals: metals, constellations: constellations}
+    as1 = %Aspect{id: 0, name: "Conjunction", angle: 0, delta: 8, influence: 5}
+    as2 = %Aspect{id: 0, name: "Opposition", angle: 180, delta: 8, influence: -5}
+    as3 = %Aspect{id: 0, name: "Trine", angle: 120, delta: 8, influence: 4}
+    as4 = %Aspect{id: 0, name: "Square", angle: 90, delta: 8, influence: -4}
+    as5 = %Aspect{id: 0, name: "Sextile", angle: 60, delta: 6, influence: 3}
+    as6 = %Aspect{id: 0, name: "Quincunx", angle: 150, delta: 3, influence: -3}
+    as7 = %Aspect{id: 0, name: "Semisextile", angle: 30, delta: 2, influence: 2}
+    as8 = %Aspect{id: 0, name: "Semisquare", angle: 45, delta: 2, influence: -2}
+    as9 = %Aspect{id: 0, name: "Sesquiquadrate", angle: 135, delta: 2, influence: -1}
+    as10 = %Aspect{id: 0, name: "Quintile", angle: 72, delta: 2, influence: 1}
+    as11 = %Aspect{id: 0, name: "Biquintile", angle: 144, delta: 2, influence: 1}
+    aspects = [as1, as2, as3, as4, as5, as6, as7, as8, as9, as10, as11]
+    
   end
   
   def byIndex([], _) do
