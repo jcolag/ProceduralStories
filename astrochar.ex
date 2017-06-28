@@ -153,7 +153,6 @@ defmodule Orrery do
     c12 = %Constellation{id: 11, name: "Pisces", angle: 330, traitid: 5, positive: true, elementid: 2, qualityid: 2}
     constellations = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12]
     
-    %Orrery {planets: planets, elements: elements, qualities: qualities, traits: traits, effects: effects, events: events, metals: metals, constellations: constellations}
     as1 = %Aspect{id: 0, name: "Conjunction", angle: 0, delta: 8, influence: 5}
     as2 = %Aspect{id: 0, name: "Opposition", angle: 180, delta: 8, influence: -5}
     as3 = %Aspect{id: 0, name: "Trine", angle: 120, delta: 8, influence: 4}
@@ -167,6 +166,7 @@ defmodule Orrery do
     as11 = %Aspect{id: 0, name: "Biquintile", angle: 144, delta: 2, influence: 1}
     aspects = [as1, as2, as3, as4, as5, as6, as7, as8, as9, as10, as11]
     
+    %Orrery {planets: planets, elements: elements, qualities: qualities, traits: traits, effects: effects, events: events, metals: metals, constellations: constellations, aspects: aspects}
   end
   
   def byIndex([], _) do
