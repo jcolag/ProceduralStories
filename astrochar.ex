@@ -286,7 +286,6 @@ defmodule Orrery do
         true ->
           dt
       end
-    sign
     { sign, dt }
   end
   
