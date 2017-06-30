@@ -304,6 +304,20 @@ defmodule Orrery do
     IO.puts planet.name <> ": " <> trait.name <> ", " <> event.name <> ", " <> effect.name <> ", " <> metal.name
   end
   
+  def matchAspect(aspect, p1, a1, p2, a2) do
+    delta = Math.abs(angleDiff(a1, a2))
+    cond do
+      p1 == p2 ->
+      	false
+      delta > aspect.angle + aspect.delta ->
+        false
+      delta < aspect.angle - aspect.delta ->
+      	false
+      true ->
+        true
+    end
+  end
+
   def describePair(orrery, planet, sign) do
     describePlanet(orrery, planet)
     describeSign(orrery, sign)
