@@ -336,5 +336,5 @@ defmodule Orrery do
   end
 end
 
-Orrery.go("Earth", 3000006)
+Orrery.go("Earth", 1642500000000)
 
