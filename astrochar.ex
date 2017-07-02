@@ -305,7 +305,7 @@ defmodule Orrery do
   end
   
   def matchAspect(aspect, p1, a1, p2, a2) do
-    delta = Math.abs(angleDiff(a1, a2))
+    delta = Kernel.abs(angleDiff(a1.angle, a2.angle))
     cond do
       p1 == p2 ->
       	false
