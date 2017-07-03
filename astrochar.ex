@@ -308,13 +308,13 @@ defmodule Orrery do
     delta = Kernel.abs(angleDiff(a1.angle, a2.angle))
     cond do
       p1 == p2 ->
-      	false
+      	nil
       delta > aspect.angle + aspect.delta ->
-        false
+        nil
       delta < aspect.angle - aspect.delta ->
-      	false
+      	nil
       true ->
-        true
+        {p1, p2, aspect}
     end
   end
 
