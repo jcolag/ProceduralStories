@@ -317,6 +317,10 @@ defmodule Orrery do
         {p1, p2, aspect}
     end
   end
+  
+  def printAspect(p1, p2, aspect) do
+    IO.puts p1.name <> " and " <> p2.name <> " are in " <> aspect.name
+  end
 
   def describePair(orrery, planet, sign) do
     describePlanet(orrery, planet)
