@@ -322,6 +322,20 @@ defmodule Orrery do
     IO.puts p1.name <> " and " <> p2.name <> " are in " <> aspect.name
   end
 
+  def findAspects(orrery, planet, angle, angles) do
+    aspects = orrery.aspects
+    result = Enum.map(angles, fn {th, p} ->
+      Enum.filter(
+      	Enum.map(aspects, fn a -> matchAspect(a, planet, angle, p, th) end),
+      	fn x -> x != nil
+      end)
+    end)
+    Enum.map(result, fn r ->
+      Enum.map(r, fn {p1, p2, a} -> printAspect(p1, p2, a) end)
+    end)
+    result
+  end
+  
   def describePair(orrery, planet, sign) do
     describePlanet(orrery, planet)
     describeSign(orrery, sign)
