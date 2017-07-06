@@ -351,6 +351,7 @@ defmodule Orrery do
     angles = Enum.map(positions, fn {pl,pos} -> { getRelativeAngle(homePos, pos), pl } end)
     signs = Enum.map(angles, fn {a,p} -> { findSign(orrery.constellations, a.angle), p } end)
     Enum.map(signs, fn {{s,_},p} -> describePair(orrery, p, s) end)
+    Enum.map(angles, fn {a, p} -> findAspects(orrery, p, a, angles) end)
   end
 end
 
