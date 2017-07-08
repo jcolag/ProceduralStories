@@ -322,7 +322,7 @@ defmodule Orrery do
     IO.puts p1.name <> " and " <> p2.name <> " are in " <> aspect.name
   end
 
-  def findAspects(orrery, planet, angle, angles) do
+  def findAspects(orrery, planet, angle, angles, day) do
     aspects = orrery.aspects
     result = Enum.map(angles, fn {th, p} ->
       Enum.filter(
@@ -351,7 +351,7 @@ defmodule Orrery do
     angles = Enum.map(positions, fn {pl,pos} -> { getRelativeAngle(homePos, pos), pl } end)
     signs = Enum.map(angles, fn {a,p} -> { findSign(orrery.constellations, a.angle), p } end)
     Enum.map(signs, fn {{s,_},p} -> describePair(orrery, p, s) end)
-    Enum.map(angles, fn {a, p} -> findAspects(orrery, p, a, angles) end)
+    Enum.map(angles, fn {a, p} -> findAspects(orrery, p, a, angles, day) end)
   end
 end
 
