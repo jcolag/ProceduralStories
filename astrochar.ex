@@ -58,7 +58,7 @@ defmodule Aspect do
 end
 
 defmodule Position do
-  defstruct id: -1, x: 0, y: 0
+  defstruct id: -1, x: 0, y: 0, angle: 0
   
   def changeTo(position, planet, day) do
     angle = Planet.getAngle(planet, day)
