@@ -245,7 +245,7 @@ defmodule Orrery do
     end
     x = r * cos(angle) + parPos.x
     y = r * sin(angle) + parPos.y
-    %Position{id: planet.id, x: x, y: y}
+    %Position{id: planet.id, x: x, y: y, angle: angle}
   end
   
   def getRelativeAngle(from, to) do
