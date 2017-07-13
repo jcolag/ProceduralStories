@@ -267,6 +267,17 @@ defmodule Orrery do
     end
   end
   
+  def floatRem(x, d) do
+    cond do
+      x < 0 ->
+        x
+      x < d ->
+        x
+      true ->
+        floatRem(x - d, d)
+    end
+  end
+  
   def angleDiff(a1, a2) do
     d1 = trunc a1 - a2 + 360
     d1 = rem d1, 360
