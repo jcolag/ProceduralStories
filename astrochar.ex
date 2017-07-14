@@ -279,10 +279,10 @@ defmodule Orrery do
   end
   
   def angleDiff(a1, a2) do
-    d1 = trunc a1 - a2 + 360
-    d1 = rem d1, 360
-    d2 = trunc a2 - a1 + 360
-    d2 = rem d2, 360
+    d1 = a1 - a2 + 360
+    d1 = floatRem d1, 360
+    d2 = a2 - a1 + 360
+    d2 = floatRem d2, 360
     min d1, d2
   end
   
