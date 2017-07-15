@@ -344,6 +344,15 @@ defmodule Orrery do
     Enum.map(result, fn r ->
       Enum.map(r, fn {p1, p2, a} -> printAspect(p1, p2, a) end)
     end)
+    pos0 = getPosition(orrery.planets, planet, day)
+    pos1 = getPosition(orrery.planets, planet, day + 1)
+    result = cond do
+      angleDiff(pos0.angle, pos1.angle) < 0 ->
+        IO.puts planet.name <> " is in Retrograde"
+        result <> {planet, nil, %Aspect{id: 12, name: "Retrograde"}}
+      true ->
+        result
+    end
     result
   end
   
