@@ -315,7 +315,7 @@ defmodule Orrery do
     IO.puts planet.name <> ": " <> trait.name <> ", " <> event.name <> ", " <> effect.name <> ", " <> metal.name
   end
   
-  def matchAspect(aspect, p1, a1, p2, a2, day) do
+  def matchAspect(aspect, p1, a1, p2, a2) do
     delta = Kernel.abs(angleDiff(a1.angle, a2.angle))
     cond do
       p1 == p2 ->
@@ -337,7 +337,7 @@ defmodule Orrery do
     aspects = orrery.aspects
     result = Enum.map(angles, fn {th, p} ->
       Enum.filter(
-      	Enum.map(aspects, fn a -> matchAspect(a, planet, angle, p, th, day) end),
+      	Enum.map(aspects, fn a -> matchAspect(a, planet, angle, p, th) end),
       	fn x -> x != nil
       end)
     end)
