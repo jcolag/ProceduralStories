@@ -353,6 +353,7 @@ defmodule Orrery do
       true ->
         result
     end
+    IO.puts ""
     result
   end
   
