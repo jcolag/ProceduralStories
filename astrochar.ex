@@ -57,6 +57,10 @@ defmodule Aspect do
   defstruct id: 0, name: "Aspect", angle: 0, delta: 0, influence: 0
 end
 
+defmodule Attribute do
+  defstruct traitid: -1, value: 0
+end
+
 defmodule Position do
   defstruct id: -1, x: 0, y: 0, angle: 0
   
