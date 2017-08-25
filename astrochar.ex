@@ -79,7 +79,7 @@ defmodule Orrery do
     p1 = %Planet{id: 0, name: "Sun", mass: 1988550000, centerid: -1, focusangle: 0, focusdist: 0, aradius: 1, eccentricity: 0, traitid: 0, effectid: 0, eventid: -1, metalid: 0, positive: true, currangle: 0}
     p2 = %Planet{id: 1, name: "Mercury", mass: 330, centerid: 0, focusangle: 0, focusdist: 0, aradius: 57909, eccentricity: 0.20563069, traitid: 2, effectid: 2, eventid: 2, metalid: -1, positive: true, currangle: 0}
     p3 = %Planet{id: 2, name: "Venus", mass: 4868, centerid: 0, focusangle: 0, focusdist: 0, aradius: 108208, eccentricity: 0.00677323, traitid: 3, effectid: 3, eventid: -1, metalid: 3, positive: true, currangle: 0}
-    p4 = %Planet{id: 3, name: "Earth", mass: 5972, centerid: 0, focusangle: 0, focusdist: 0, aradius: 149598, eccentricity: 0.01671022, traitid: 0, effectid: -1, eventid: -1, metalid: -1, positive: true, currangle: 0}
+    p4 = %Planet{id: 3, name: "Earth", mass: 5972, centerid: 0, focusangle: 0, focusdist: 0, aradius: 149598, eccentricity: 0.01671022, traitid: -1, effectid: -1, eventid: -1, metalid: -1, positive: true, currangle: 0}
     p5 = %Planet{id: 4, name: "Moon", mass: 73, centerid: 3, focusangle: 0, focusdist: 0, aradius: 385, eccentricity: 0.0549, traitid: 1, effectid: 3, eventid: -1, metalid: 1, positive: true, currangle: 0}
     p6 = %Planet{id: 5, name: "Mars", mass: 641, centerid: 0, focusangle: 0, focusdist: 0, aradius: 227939, eccentricity: 0.09341233, traitid: 4, effectid: 4, eventid: -1, metalid: 4, positive: true, currangle: 0}
     p7 = %Planet{id: 6, name: "Jupiter", mass: 1898700, centerid: 0, focusangle: 0, focusdist: 0, aradius: 778299, eccentricity: 0.04839266, traitid: 5, effectid: 5, eventid: 5, metalid: -1, positive: true, currangle: 0}
