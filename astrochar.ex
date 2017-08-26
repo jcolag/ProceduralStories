@@ -105,7 +105,7 @@ defmodule Orrery do
     qualities = [q1, q2, q3]
     
     t1 = %Trait{id: 0, name: "Gregarious"}
-    t2 = %Trait{id: 1, name: "Wandering"}
+    t2 = %Trait{id: 1, name: "Impulsive"}
     t3 = %Trait{id: 2, name: "Quick"}
     t4 = %Trait{id: 3, name: "Charismatic"}
     t5 = %Trait{id: 4, name: "Assertive"}
