@@ -61,6 +61,10 @@ defmodule Attribute do
   defstruct traitid: -1, value: 0
 end
 
+defmodule Character do
+  defstruct id: 0, name: "Character", birth: 0, attributes: []
+end
+
 defmodule Position do
   defstruct id: -1, x: 0, y: 0, angle: 0
   
