@@ -381,6 +381,9 @@ defmodule Orrery do
     signs = Enum.map(angles, fn {a,p} -> { findSign(orrery.constellations, a.angle), p } end)
     Enum.map(signs, fn {{s,_},p} -> describePair(orrery, p, s) end)
     Enum.map(angles, fn {a, p} -> findAspects(orrery, p, a, angles, day) end)
+    attrs = Enum.map(orrery.traits, fn t -> %Attribute{traitid: t.id, value: Enum.random(1..10)} end)
+    person = %Character{id: 0, name: "Person", birth: day - 365 * Enum.random(20..60), attributes: attrs}
+    IO.inspect person
   end
 end
 
