@@ -65,7 +65,6 @@ typings/
 
 # Output files
 *.html
-*.json
 
 # gedit backup files
 *~
