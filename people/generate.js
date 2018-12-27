@@ -5,6 +5,28 @@ const countries = loadGrid('country_deg.csv');
 const ciafact = JSON.parse(fs.readFileSync('factbook.json'));
 const countrycodes = {};
 
+// For countries, row 135 appears to map to 55S latitude, based on
+// there being Australian territory, which would be the Bishop and
+// Clerk Islets.
+// Row 139 lists country 906, which isn't on the ISO 3166-1 list,
+// but since that would be around 59S and southest of South America,
+// they must be South Georgia and the South Sandwich Islands, which
+// matches the crescent shape, and Southern Thule indeed has latitudes
+// at 59S.
+// That sets the equator to row 80.
+
+// For populations, the last row is 135, which represents the
+// southernmost parts of South America.  Conveniently, both maps
+// run that line from the 109th column to the 114th, so the two
+// maps do match.
+
+// Based on visual inspection, specifically the location of Oran,
+// Algeria, the 179th column appears to be the Prime Meridian.  And
+// 80x179 looks a lot like where one would expect Null Island.
+
+const zeroLat = 80;
+const zeroLong = 179;
+
 // Build a hash table of country code to country name
 const lines = fs
   .readFileSync('country-3166-1.csv')
