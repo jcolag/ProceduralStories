@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+let people = 10;
 const population = loadGrid('population_density_deg.csv');
 const countries = loadGrid('country_deg.csv');
 const ciafact = JSON.parse(fs.readFileSync('factbook.json'));
@@ -26,6 +27,9 @@ const countrycodes = {};
 
 const zeroLat = 80;
 const zeroLong = 179;
+
+// We may want to ignore the upper latitudes for some projects.
+let maxLat = 80;
 
 // Build a hash table of country code to country name
 const lines = fs
