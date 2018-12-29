@@ -31,6 +31,9 @@ const zeroLong = 179;
 // We may want to ignore the upper latitudes for some projects.
 let maxLat = 80;
 
+let lat = 0;
+let long = 0;
+
 // Build a hash table of country code to country name
 const lines = fs
   .readFileSync('country-3166-1.csv')
@@ -53,6 +56,18 @@ for (let i = 0; i < lines.length; i++) {
   }
 
   countrycodes[parts[0]] = name.replace(/"/g, '');
+}
+
+// Count up the total population listed on the map
+let total = 0;
+
+for (lat = zeroLat - maxLat; lat < population.length; lat++) {
+  for (long = 0; long < population[lat].length; long++) {
+    const n = new Number(population[lat][long]);
+    if (!isNaN(n)) {
+      total += n;
+    }
+  }
 }
 
 function loadGrid(filename) {
