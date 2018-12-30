@@ -70,6 +70,13 @@ for (lat = zeroLat - maxLat; lat < population.length; lat++) {
   }
 }
 
+for (var person = 0; person < people; person++) {
+  let index = Math.random() * total;
+  let count = 0;
+  let found = false;
+
+}
+
 function loadGrid(filename) {
   const result = [];
   const lines = fs
