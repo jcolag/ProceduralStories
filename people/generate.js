@@ -75,6 +75,10 @@ for (var person = 0; person < people; person++) {
   let count = 0;
   let found = false;
 
+  // This is more or less a Markov process with one step and
+  // no context:  Pick a random number (index) and subtract
+  // graticule populations until we've seen more people than
+  // the random number.
 }
 
 function loadGrid(filename) {
