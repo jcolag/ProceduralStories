@@ -79,6 +79,21 @@ for (var person = 0; person < people; person++) {
   // no context:  Pick a random number (index) and subtract
   // graticule populations until we've seen more people than
   // the random number.
+  for (i = zeroLat - maxLat; i < population.length; i++) {
+    for (let j = 0; j < population[i].length; j++) {
+      const n = new Number(population[i][j]);
+      if (!isNaN(n)) {
+        count += n;
+        if (count > index) {
+          lat = i;
+          long = j;
+          found = true;
+          break;
+        }
+      }
+    }
+
+  }
 }
 
 function loadGrid(filename) {
