@@ -93,6 +93,9 @@ for (var person = 0; person < people; person++) {
       }
     }
 
+    if (found) {
+      break;
+    }
   }
 }
 
