@@ -35,6 +35,21 @@ let lat = 0;
 let long = 0;
 
 // Build a hash table of country code to country name
+// Note that the following territories have assigned ISO
+// country codes and those codes are listed on the
+// SEDAC country map, but do NOT appear in the CIA World
+// Factbook at this time, because they are not (or are
+// not recognized as) independent nations:
+//  * Åland Islands (autonomous region of Finland)
+//  * Bonaire, Sint Eustatius and Saba (under Dutch control)
+//  * French Guiana (under French control)
+//  * Guadeloupe (under French control)
+//  * Martinique (under French control)
+//  * Mayotte (under French control)
+//  * Réunion (under French control)
+// In addition, the French Southern Territories and United
+// States Minor Outlying Islands both have country codes, but
+// do not appear elsewhere in the data.
 const lines = fs
   .readFileSync('country-3166-1.csv')
   .toString()
