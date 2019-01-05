@@ -112,6 +112,14 @@ for (var person = 0; person < people; person++) {
       break;
     }
   }
+
+  // Convert the row and column to a latitude, longitude, and
+  // country
+  const ns = zeroLat > lat ? 'N' : 'S';
+  const ew = zeroLong > long ? 'W' : 'E';
+  const ccode = countries[lat][long];
+  const country = countrycodes[ccode];
+  console.log(`${Math.abs(zeroLat - lat)}${ns} ${Math.abs(zeroLong - long)}${ew} : ${country} (${ccode})`);
 }
 
 function loadGrid(filename) {
