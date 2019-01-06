@@ -1,4 +1,5 @@
 const fs = require('fs');
+const nearestCities = require('find-nearest-cities');
 
 let people = 10;
 const population = loadGrid('population_density_deg.csv');
@@ -120,6 +121,12 @@ for (var person = 0; person < people; person++) {
   const ccode = countries[lat][long];
   const country = countrycodes[ccode];
   console.log(`${Math.abs(zeroLat - lat)}${ns} ${Math.abs(zeroLong - long)}${ew} : ${country} (${ccode})`);
+  const clat = zeroLat - lat + Math.random() - 0.5;
+  const clong = long - zeroLong + Math.random() - 0.5;
+  const cities = nearestCities(clat, clong).sort((a,b) => a.distance - b.distance);
+  cities.forEach(c => {
+    console.log(` ${c.name}, ${c.adminCode}, ${c.country} (${c.lat}, ${c.lon}) ${c.distance/1000}km`);
+  });
 }
 
 function loadGrid(filename) {
