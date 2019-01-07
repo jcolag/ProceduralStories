@@ -127,6 +127,7 @@ for (var person = 0; person < people; person++) {
   cities.forEach(c => {
     console.log(` ${c.name}, ${c.adminCode}, ${c.country} (${c.lat}, ${c.lon}) ${c.distance/1000}km`);
   });
+  const key = createCiaKey(country);
 }
 
 function loadGrid(filename) {
@@ -143,3 +144,16 @@ function loadGrid(filename) {
   return result;
 }
 
+
+function createCiaKey(country) {
+  return country
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/ /g, '_')
+    .replace(/_/g, '_')
+    .replace(/,/g, '')
+    .replace(/\(/g, '')
+    .replace(/\)/g, '')
+    ;
+}
