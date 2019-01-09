@@ -144,6 +144,19 @@ function loadGrid(filename) {
   return result;
 }
 
+function chooseRandom(list) {
+  var roll = Math.random() * 100;
+  var count = -1;
+  while (roll > 0) {
+    count += 1;
+    if (list[count] && list[count].hasOwnProperty('percent')) {
+      roll -= list[count].percent;
+    } else {
+      roll = 0;
+    }
+  }
+  return list[count];
+}
 
 function createCiaKey(country) {
   return country
