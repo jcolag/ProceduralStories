@@ -128,6 +128,11 @@ for (var person = 0; person < people; person++) {
     console.log(` ${c.name}, ${c.adminCode}, ${c.country} (${c.lat}, ${c.lon}) ${c.distance/1000}km`);
   });
   const key = createCiaKey(country);
+  if (ciafact.countries.hasOwnProperty(key)) {
+    const people = ciafact.countries[key].data.people;
+  } else {
+    console.log(`* * Could not find ${key}`);
+  }
 }
 
 function loadGrid(filename) {
