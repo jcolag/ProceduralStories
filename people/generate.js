@@ -130,6 +130,15 @@ for (var person = 0; person < people; person++) {
   const key = createCiaKey(country);
   if (ciafact.countries.hasOwnProperty(key)) {
     const people = ciafact.countries[key].data.people;
+    const ageList = [];
+    Object.keys(people.age_structure).forEach(a => {
+      const age = people.age_structure[a];
+      if (age.hasOwnProperty('percent')) {
+        age.name = a;
+        ageList.push(age);
+      }
+    });
+    const age = chooseRandom(ageList);
   } else {
     console.log(`* * Could not find ${key}`);
   }
