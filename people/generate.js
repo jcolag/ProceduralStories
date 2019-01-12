@@ -141,6 +141,10 @@ for (var person = 0; person < people; person++) {
     const age = chooseRandom(ageList);
     const agePeople = age.males + age.females;
     const gender = Math.random() * agePeople <= age.males ? 'Male' : 'Female';
+    const religion = chooseRandom(people.religions.religion);
+    const ethnic = chooseRandom(people.ethnic_groups.ethnicity);
+    console.log(` > ${ciafact.countries[key].data.government.country_name.local_long_form}`);
+    console.log(` > ${gender}, age ${age.name.replace(/_/g, ' ')}, ${religion.name} (${religion.percent}%), ${ethnic.name} (${ethnic.percent}%)`);
   } else {
     console.log(`* * Could not find ${key}`);
   }
