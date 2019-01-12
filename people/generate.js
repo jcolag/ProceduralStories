@@ -139,6 +139,8 @@ for (var person = 0; person < people; person++) {
       }
     });
     const age = chooseRandom(ageList);
+    const agePeople = age.males + age.females;
+    const gender = Math.random() * agePeople <= age.males ? 'Male' : 'Female';
   } else {
     console.log(`* * Could not find ${key}`);
   }
