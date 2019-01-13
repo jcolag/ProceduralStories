@@ -145,6 +145,18 @@ for (var person = 0; person < people; person++) {
     const ethnic = chooseRandom(people.ethnic_groups.ethnicity);
     console.log(` > ${ciafact.countries[key].data.government.country_name.local_long_form}`);
     console.log(` > ${gender}, age ${age.name.replace(/_/g, ' ')}, ${religion.name} (${religion.percent}%), ${ethnic.name} (${ethnic.percent}%)`);
+    const g = gender.toLowerCase();
+    if (people.literacy && people.literacy.hasOwnProperty(g)) {
+      const lit = people.literacy[g];
+      if (lit.units === '%') {
+        const r = Math.random() * 100;
+        if (r <= lit.value) {
+          console.log(' > Literate');
+        }
+      } else {
+        console.log(`-> Found weird units ("${lit.units}")`);
+      }
+    }
   } else {
     console.log(`* * Could not find ${key}`);
   }
