@@ -157,6 +157,15 @@ for (var person = 0; person < people; person++) {
         console.log(`-> Found weird units ("${lit.units}")`);
       }
     }
+    var languages = ' > Language(s): ';
+    people.languages.language.forEach(l => {
+      if (Math.random() * 100 <= l.percent) {
+        languages += `${l.name} (${l.percent}%), `
+      }
+    });
+    if (languages.length > 16) {
+      console.log(languages.replace(/, $/, ''));
+    }
   } else {
     console.log(`* * Could not find ${key}`);
   }
