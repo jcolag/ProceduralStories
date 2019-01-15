@@ -24,3 +24,8 @@ At heart, `astrochar.ex` is a sort of orrery, attempting to mimic [Kepler's laws
 
 It will start with the features of [Western astrology](https://en.wikipedia.org/wiki/Western_astrology) and presumably incorporate other traditions.  The result _should_ be, based on a birthday, a rough character personality concept and a daily situation.
 
+
+### Background Generation (`generate.js`)
+
+An obvious problem in creating characters is in diversifying backgrounds, especially when it's far easier to assume that everybody looks like one's neighbors.  American sitcoms come to mind as a strong example, where a viewer can still somehow watch a show set in an urban center where ten out of ten people just happen to be white people in their twenties.
+
