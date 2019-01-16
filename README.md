@@ -29,3 +29,7 @@ It will start with the features of [Western astrology](https://en.wikipedia.org/
 
 An obvious problem in creating characters is in diversifying backgrounds, especially when it's far easier to assume that everybody looks like one's neighbors.  American sitcoms come to mind as a strong example, where a viewer can still somehow watch a show set in an urban center where ten out of ten people just happen to be white people in their twenties.
 
+`generate`, then, guesses at a random person on Earth, to take advantage of the full scope of diversity on the planet.
+
+In short, the program uses a population density map from Columbia University's [SEDAC](http://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-density-rev10/data-download) to find a random latitude and longitude, then uses that information to find the country best represented by that location and the five nearest cities.
+
