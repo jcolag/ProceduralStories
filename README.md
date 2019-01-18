@@ -33,6 +33,12 @@ An obvious problem in creating characters is in diversifying backgrounds, especi
 
 In short, the program uses a population density map from Columbia University's [SEDAC](http://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-density-rev10/data-download) to find a random latitude and longitude, then uses that information to find the country best represented by that location and the five nearest cities.
 
+Note that:
+
+ * Because of the rectangular projection used by the SEDAC maps, it's surprisingly common for selected coordinates to be out in the ocean or for the nearest cities to all be in a different country.
+ * One degree of longitude by one degree of latitude is a _big_ space, but that map is used because the file has a reasonable size.  In the downloads at the SEDAC site, you can also find maps whose cells are one kilometer by one kilometer.  The existing code should at least _mostly_ work for those.
+ * A handful of countries recognized by SEDAC are not recognized by the rest of the world.
+
 Given a country, then, `generate` uses the JSON conversion of the [CIA World Factbook](https://github.com/iancoleman/cia_world_factbook_api) to create a random skeletal background for the target person based on the country, including:
 
  * Age range
