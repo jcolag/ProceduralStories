@@ -48,3 +48,16 @@ Given a country, then, `generate` uses the JSON conversion of the [CIA World Fac
  * Literacy
  * Languages Spoken
 
+Because the data is on the national level, the religion, ethnicity, and language information do _not_ necessarily correlate appropriately with each other or with location.  To explain, here's one example.
+
+```
+28S 46W : Brazil (76)
+ Lagoa, 26, BR (-27.60491, -48.46713) 240.974km
+ Rio Tavares, 26, BR (-27.64529, -48.47486) 241.262km
+ Pantano do Sul, 26, BR (-27.77972, -48.50861) 243.4km
+ Armação, 26, BR (-27.74963, -48.50713) 243.55km
+ Itacorubi, 26, BR (-27.58315, -48.49503) 244.33km
+ > Republica Federativa do Brasil
+ > Male, age 25 to 54, Spiritist (2.2%), mulatto (43.1%)
+ > Literate
+```
