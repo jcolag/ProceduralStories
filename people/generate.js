@@ -7,6 +7,10 @@ const countries = loadGrid('country_deg.csv');
 const ciafact = JSON.parse(fs.readFileSync('factbook.json'));
 const countrycodes = {};
 
+if (process.argv.length > 2) {
+  people = Number(process.argv[2]);
+}
+
 // For countries, row 135 appears to map to 55S latitude, based on
 // there being Australian territory, which would be the Bishop and
 // Clerk Islets.
