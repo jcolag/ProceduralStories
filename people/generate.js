@@ -36,6 +36,10 @@ const zeroLong = 179;
 // We may want to ignore the upper latitudes for some projects.
 let maxLat = 80;
 
+if (process.argv.length > 3) {
+  maxLat = Number(process.argv[3]);
+}
+
 let lat = 0;
 let long = 0;
 
