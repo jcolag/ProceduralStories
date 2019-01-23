@@ -65,3 +65,5 @@ Because the data is on the national level, the religion, ethnicity, and language
 In this case, we've generated someone in a tiny religious minority and a large ethnic minority, so he's a perfect example.  The position is in (or near) Rio de Janeiro, Brazil.  Are the "mulattos" (local term with a specific connotation, not the offensive English term) sufficiently represented around Rio to be likely?  Is there any overlap with Spiritists?  Do Spiritists tend to be in the 25 to 54 age bracket?  Unless you know the area well, it would take research to know definitively.
 
 Ideally, this part of the generation would use the country's census information, but finding and packaging census information for every country in the world would require a prohibitive level of effort.
+
+Perhaps noteworthy, the specific project I had in mind for this script involved a world where much of the Northern Hemisphere is irrelevant.  So, the program has a variable and a command-line parameter to set the northernmost latitude.
