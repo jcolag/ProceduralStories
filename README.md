@@ -67,3 +67,7 @@ In this case, we've generated someone in a tiny religious minority and a large e
 Ideally, this part of the generation would use the country's census information, but finding and packaging census information for every country in the world would require a prohibitive level of effort.
 
 Perhaps noteworthy, the specific project I had in mind for this script involved a world where much of the Northern Hemisphere is irrelevant.  So, the program has a variable and a command-line parameter to set the northernmost latitude.
+
+You can modify the number of people generated and the northernmost latitude with command-line arguments.  This being a lazily-written script, these arguments are determined by position, the count followed by the latitude.  The command:
+
+ > `node generate.js 5 50`
