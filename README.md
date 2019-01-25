@@ -71,3 +71,5 @@ Perhaps noteworthy, the specific project I had in mind for this script involved 
 You can modify the number of people generated and the northernmost latitude with command-line arguments.  This being a lazily-written script, these arguments are determined by position, the count followed by the latitude.  The command:
 
  > `node generate.js 5 50`
+
+then, will create five characters originating from no further north than 50N.
