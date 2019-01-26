@@ -73,3 +73,7 @@ You can modify the number of people generated and the northernmost latitude with
  > `node generate.js 5 50`
 
 then, will create five characters originating from no further north than 50N.
+
+### Language Nonsense (`people/geller.js`)
+
+This is a self-consciously goofier idea than the other scripts.
