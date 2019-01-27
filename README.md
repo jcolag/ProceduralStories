@@ -77,3 +77,5 @@ then, will create five characters originating from no further north than 50N.
 ### Language Nonsense (`people/geller.js`)
 
 This is a self-consciously goofier idea than the other scripts.
+
+In the original _Mission: Impossible_ TV series, production designer Bruce Geller created signage with fictional languages.  Generally, these were intended to represent generic Eastern European and South American countries without naming a specific country.  And the pseudo-languages were strongly based on English to a degree that a mono-lingual American living in the 1960s could easily read it.
