@@ -81,3 +81,6 @@ This is a self-consciously goofier idea than the other scripts.
 In the original _Mission: Impossible_ TV series, production designer Bruce Geller created signage with fictional languages.  Generally, these were intended to represent generic Eastern European and South American countries without naming a specific country.  And the pseudo-languages were strongly based on English to a degree that a mono-lingual American living in the 1960s could easily read it.
 
 While the original "Gellerese," as the cast and crew called it, was an ad hoc process without much consistency, it is still a semi-interesting idea, so this script...
+
+ * Creates such an ad hoc languages, by choosing spelling rules, and
+ * "Translates" input into that language.
