@@ -82,5 +82,6 @@ In the original _Mission: Impossible_ TV series, production designer Bruce Gelle
 
 While the original "Gellerese," as the cast and crew called it, was an ad hoc process without much consistency, it is still a semi-interesting idea, so this script...
 
- * Creates such an ad hoc languages, by choosing spelling rules, and
- * "Translates" input into that language.
+ * Creates such an ad hoc languages, by choosing spelling rules,
+ * "Translates" input into that language, and
+ * Add gratuitous diacritical marks to the result.
