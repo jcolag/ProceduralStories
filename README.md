@@ -87,3 +87,5 @@ While the original "Gellerese," as the cast and crew called it, was an ad hoc pr
  * Creates such an ad hoc languages, by choosing spelling rules,
  * "Translates" input into that language, and
  * Add gratuitous diacritical marks to the result.
+
+The script maintains libraries (which should be expanded) of stereotypical spelling choices in specifically Eastern European and (with fewer options) Romance languages.
