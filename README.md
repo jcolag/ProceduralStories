@@ -89,3 +89,6 @@ While the original "Gellerese," as the cast and crew called it, was an ad hoc pr
  * Add gratuitous diacritical marks to the result.
 
 The script maintains libraries (which should be expanded) of stereotypical spelling choices in specifically Eastern European and (with fewer options) Romance languages.
+
+The result, as with Gellerese, is text that doesn't feel like English, but bears sufficient resemblance that it can be easily read.
+
