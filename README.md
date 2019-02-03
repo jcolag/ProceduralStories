@@ -90,5 +90,10 @@ While the original "Gellerese," as the cast and crew called it, was an ad hoc pr
 
 The script maintains libraries (which should be expanded) of stereotypical spelling choices in specifically Eastern European and (with fewer options) Romance languages.
 
-The result, as with Gellerese, is text that doesn't feel like English, but bears sufficient resemblance that it can be easily read.
+The result, as with Gellerese, is text that doesn't feel like English, but bears sufficient resemblance that it can be easily read.  For example:
+
+ > Da r͋ȅsult, a̾en v͗id Zellérͅesa͒, ien̙ te͓xͮt da̮t͊ do̶esn't fe͘elͫ li͔ka En͒zl͘ish, bu̞t̀ bea̿re̔n s̼uf̸ficie͆nt r̒e͋se̐m͈b̵la͘n͒ca d͢a͗t̿ it can ba easily r͡ëa͎a. F̕er exa̙m̏pla...
+
+...Obviously, a work in progress.
+
 
