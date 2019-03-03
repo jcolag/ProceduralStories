@@ -74,6 +74,8 @@ You can modify the number of people generated and the northernmost latitude with
 
 then, will create five characters originating from no further north than 50N.
 
+By default, the parameters are assumed to be ten characters as far north as 80N, which is as far north as the maps go.
+
 ### Language Nonsense (`people/geller.js`)
 
 This is a self-consciously goofier idea than the other scripts.
