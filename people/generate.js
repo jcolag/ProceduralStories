@@ -67,19 +67,22 @@ const lines = fs
 for (let i = 0; i < lines.length; i++) {
   const parts = lines[i].split(',');
   
-  if (parts.length < 2) {
+  if (parts.length < 3) {
     break;
   }
 
-  let name = parts[1];
+  let name = parts[2];
 
   if (name[0] === '"') {
-    for (let j = 2; j < parts.length; j++) {
+    for (let j = 3; j < parts.length; j++) {
       name += `,${parts[j]}`;
     }
   }
 
-  countrycodes[parts[0]] = name.replace(/"/g, '');
+  countrycodes[parts[0]] = {
+    'numeric': name.replace(/"/g, ''),
+    'alpha': parts[1]
+  };
 }
 
 // Count up the total population listed on the map
@@ -127,7 +130,7 @@ for (var person = 0; person < people; person++) {
   const ns = zeroLat > lat ? 'N' : 'S';
   const ew = zeroLong > long ? 'W' : 'E';
   const ccode = countries[lat][long];
-  const country = countrycodes[ccode];
+  const country = countrycodes[ccode].numeric;
   console.log(`${Math.abs(zeroLat - lat)}${ns} ${Math.abs(zeroLong - long)}${ew} : ${country} (${ccode})`);
   const clat = zeroLat - lat + Math.random() - 0.5;
   const clong = long - zeroLong + Math.random() - 0.5;
