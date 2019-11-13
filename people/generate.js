@@ -4,8 +4,34 @@ const nearestCities = require('find-nearest-cities');
 let people = 10;
 const population = loadGrid('population_density_deg.csv');
 const countries = loadGrid('country_deg.csv');
+var skinTones = loadGrid('skintones.csv');
 const ciafact = JSON.parse(fs.readFileSync('factbook.json'));
 const countrycodes = {};
+const skinTonesR = skinTones.reverse().slice(1);
+const skinMaxX = Number(skinTonesR[0][0]) + 1;
+const skinMaxY = Number(skinTonesR[0][1]) + 1;
+const skinRatioX = skinMaxX / countries[0].length;
+const skinRatioY = skinMaxY / countries.length;
+const skinToneMap = [];
+
+for (stmx = 0; stmx < skinMaxX; stmx++) {
+  skinToneMap.push(new Array(skinMaxY));
+}
+
+for (pi = 0; pi < skinTonesR.length; pi++) {
+  let row = skinTonesR[pi];
+  let x = Number(row[0]);
+  let y = Number(row[1]);
+  let r = Number(row[2]);
+  let g = Number(row[3]);
+  let b = Number(row[4]);
+  
+  skinToneMap[y][x] = {
+    r: r,
+    g: g,
+    b: b,
+  }
+}
 
 if (process.argv.length > 2) {
   people = Number(process.argv[2]);
