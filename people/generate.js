@@ -280,5 +280,6 @@ function createCiaKey(country) {
     .replace(/saint_martin_french_part/g, 'saint_martin')
     .replace(/svalbard_and_jan_mayen/g, 'svalbard')
     .replace(/macedonia_the_former_yugoslav_republic_of/g, 'macedonia')
+    .replace(/bonaire_sint_eustatius_and_saba/g, 'aruba')
     ;
 }
