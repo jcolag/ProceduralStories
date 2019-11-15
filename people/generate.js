@@ -283,3 +283,15 @@ function createCiaKey(country) {
     .replace(/bonaire_sint_eustatius_and_saba/g, 'aruba')
     ;
 }
+function letterToEmoji(l) {
+  return String.fromCodePoint(l.toLowerCase().charCodeAt() + 127365);
+}
+
+function getFlagEmoji(country) {
+  if (!country) {
+    return '';
+  }
+  
+  const cc = country.toUpperCase();
+  return Array.from(cc).map(letterToEmoji).join('');
+}
