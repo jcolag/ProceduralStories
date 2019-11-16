@@ -283,6 +283,89 @@ function createCiaKey(country) {
     .replace(/bonaire_sint_eustatius_and_saba/g, 'aruba')
     ;
 }
+
+function getSkinTone(skinToneMap, lat, latScale, long, lonScale) {
+  const cx = Math.round(long * lonScale);
+  const cy = Math.round(lat * latScale);
+  let perimeter = [];
+  let radius = 0;
+  let pt;
+  let color;
+
+  while (true) {
+    for (var i = -radius; i <= radius; i++) {
+      perimeter.push({
+        x: cx - radius,
+        y: cy + i,
+      });
+      perimeter.push({
+        x: cx + radius,
+        y: cy + i,
+      });
+      perimeter.push({
+        x: cx + i,
+        y: cy - radius,
+      });
+      perimeter.push({
+        x: cx + i,
+        y: cy + radius,
+      });
+    }
+    
+    perimeter = perimeter.filter(onlyUnique);
+    for (var index = 0; index < perimeter.length; index++) {
+      pt = perimeter[index];
+      color = getColorAtPoint(skinToneMap, pt.x, pt.y);
+      if (!color.isBlue && !color.isBlack) {
+        return `#${color.r}${color.g}${color.b} ${color.hand}`
+          .toUpperCase();
+      }
+    }
+    
+    radius = radius + 1;
+    perimeter = [];
+  }
+
+  return `unknown to radius: ${radius}`;
+}
+
+function onlyUnique(value, index, self) {
+  return index === self.findIndex(obj => {
+    return JSON.stringify(obj) === JSON.stringify(value);
+  });
+}
+
+function getColorAtPoint(colors, px, py) {
+  const tones = [ '🏿', '🏿', '🏾', '🏾', '🏽', '🏼', '🏻' ];
+  
+  if (py >= colors.length || px >= colors[0].length) {
+    return {
+      r: 0,
+      g: 0,
+      b: 255,
+      isBlack: true,
+      isBlue: true,
+    };
+  }
+  
+  const pixel = colors[py][px];
+  const r = pixel.r.toString(16).padStart(2, '0');
+  const g = pixel.g.toString(16).padStart(2, '0');
+  const b = pixel.b.toString(16).padStart(2, '0');
+  const max = Math.max.apply(Math, [ pixel.r, pixel.g, pixel.b ]);
+  const l = Math.trunc(tones.length * max / 256);
+  
+  return {
+    r,
+    g,
+    b,
+    l,
+    hand: `👋${tones[l]}`,
+    isBlack: pixel.r === 0 && pixel.g === 0 && pixel.b === 0,
+    isBlue: pixel.b > pixel.r && pixel.b > pixel.g,
+  };
+}
+
 function letterToEmoji(l) {
   return String.fromCodePoint(l.toLowerCase().charCodeAt() + 127365);
 }
