@@ -157,7 +157,9 @@ for (var person = 0; person < people; person++) {
   const ew = zeroLong > long ? 'W' : 'E';
   const ccode = countries[lat][long];
   const country = countrycodes[ccode].numeric;
-  console.log(`${Math.abs(zeroLat - lat)}${ns} ${Math.abs(zeroLong - long)}${ew} : ${country} (${ccode})`);
+  const flag = getFlagEmoji(countrycodes[ccode].alpha);
+  const skin = getSkinTone(skinToneMap, lat, skinRatioY, long, skinRatioX);
+  console.log(`${Math.abs(zeroLat - lat)}${ns} ${Math.abs(zeroLong - long)}${ew} : ${country} ${flag} (${ccode})`);
   const clat = zeroLat - lat + Math.random() - 0.5;
   const clong = long - zeroLong + Math.random() - 0.5;
   const cities = nearestCities(clat, clong).sort((a,b) => a.distance - b.distance);
