@@ -181,9 +181,16 @@ for (var person = 0; person < people; person++) {
     const agePeople = age.males + age.females;
     const gender = Math.random() * agePeople <= age.males ? 'Male' : 'Female';
     const religion = chooseRandom(people.religions.religion);
+    const denom = typeof religion === 'undefined' ? '-' : religion.name;
+    const dpop = typeof religion === 'undefined' ? '?' : religion.percent;
     const ethnic = chooseRandom(people.ethnic_groups.ethnicity);
-    console.log(` > ${ciafact.countries[key].data.government.country_name.local_long_form}`);
-    console.log(` > ${gender}, age ${age.name.replace(/_/g, ' ')}, ${religion.name} (${religion.percent}%), ${ethnic.name} (${ethnic.percent}%)`);
+    const ethnicGroup = typeof ethnic === 'undefined' ? '-' : ethnic.name;
+    const ethnicPercent = typeof ethnic === 'undefined' ? '-' : ethnic.percent;
+    const ageName = typeof age === 'undefined' ? '-' : age.name.replace(/_/g, ' ');
+    const govt = ciafact.countries[key].data.government;
+    console.log(` > ${govt.country_name.local_long_form}`);
+    console.log(` > ${gender}, age ${ageName}, ${denom} (${dpop}%), ${ethnicGroup} (${ethnicPercent}%)`);
+    console.log(` > Average regional skin tone: ${skin}`);
     const g = gender.toLowerCase();
     if (people.literacy && people.literacy.hasOwnProperty(g)) {
       const lit = people.literacy[g];
