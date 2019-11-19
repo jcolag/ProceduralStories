@@ -387,3 +387,52 @@ function getFlagEmoji(country) {
   const cc = country.toUpperCase();
   return Array.from(cc).map(letterToEmoji).join('');
 }
+
+function getLgbt() {
+  const lgbPct = [
+    {
+      'name': 'gay',
+      'value': 2.4,
+    },
+    {
+      'name': 'bisexual',
+      'value': 3.0,
+    },
+    {
+      'name': 'asexual',
+      'value': 1.0,
+    },
+  ];
+  const genderPct = [
+    {
+      'name': 'transgender',
+      'value': 0.58,
+    },
+    {
+      'name': 'non-binary',
+      'value': 0.17,
+    },
+  ];
+  let gVal = Math.random() * 100;
+  let sVal = Math.random() * 100;
+  let result = '';
+
+  for (var i = 0; i < lgbPct.length; i++) {
+    sVal -= lgbPct[i].value;
+    if (sVal < 0) {
+      result = lgbPct[i].name;
+      break;
+    }
+  }
+  
+  for (i = 0; i < genderPct.length; i++) {
+    gVal -= genderPct[i].value;
+    if (gVal < 0) {
+      const gender = genderPct[i];
+      result = `${result}${result === '' ? '' : ', '}${gender.name}`;
+      break;
+    }
+  }
+  
+  return result === '' ? '' : ` (${result})`;
+}
