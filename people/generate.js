@@ -179,7 +179,7 @@ for (var person = 0; person < people; person++) {
     });
     const age = chooseRandom(ageList);
     const agePeople = age.males + age.females;
-    const gender = Math.random() * agePeople <= age.males ? 'Male' : 'Female';
+    const gender = (Math.random() * agePeople <= age.males ? 'Male ♂' : 'Female ♀') + getLgbt();
     const religion = chooseRandom(people.religions.religion);
     const denom = typeof religion === 'undefined' ? '-' : religion.name;
     const dpop = typeof religion === 'undefined' ? '?' : religion.percent;
