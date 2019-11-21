@@ -388,6 +388,28 @@ function getFlagEmoji(country) {
   return Array.from(cc).map(letterToEmoji).join('');
 }
 
+function getMentalIllness() {
+  const mIllnessPct = {
+    'Depression': 6.7,
+    'Dysthymia': 1.5,
+    'Bipolar Disorder': 2.5,
+    'Panic Disorder': 2.7,
+    'Obsessive-Compulsive Disorder': 1.0,
+    'Post-Traumatic Stress Disorder': 3.5,
+    'Anxiety Disorder': 3.1,
+    'Social Phobia': 6.8,
+    'Schizophrenia': 1.1,
+  };
+  let list = [];
+
+  Object.keys(mIllnessPct).forEach(name => {
+    if (Math.random() * 100 < mIllnessPct[name]) {
+      list.push(`${name} (${mIllnessPct[name]}%)`);
+    }
+  });
+  return list.join(', ');
+}
+
 function getLgbt() {
   const lgbPct = [
     {
