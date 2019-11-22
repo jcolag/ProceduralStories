@@ -188,9 +188,14 @@ for (var person = 0; person < people; person++) {
     const ethnicPercent = typeof ethnic === 'undefined' ? '-' : ethnic.percent;
     const ageName = typeof age === 'undefined' ? '-' : age.name.replace(/_/g, ' ');
     const govt = ciafact.countries[key].data.government;
+    const psych = getMentalIllness();
     console.log(` > ${govt.country_name.local_long_form}`);
     console.log(` > ${gender}, age ${ageName}, ${denom} (${dpop}%), ${ethnicGroup} (${ethnicPercent}%)`);
     console.log(` > Average regional skin tone: ${skin}`);
+    if (psych !== null && psych !== '') {
+      console.log(` > Coping with: ${psych}`);
+    }
+    
     const g = gender.toLowerCase();
     if (people.literacy && people.literacy.hasOwnProperty(g)) {
       const lit = people.literacy[g];
