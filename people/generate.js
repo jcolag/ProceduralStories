@@ -189,7 +189,9 @@ for (var person = 0; person < people; person++) {
     const ageName = typeof age === 'undefined' ? '-' : age.name.replace(/_/g, ' ');
     const govt = ciafact.countries[key].data.government;
     const psych = getMentalIllness();
-    console.log(` > ${govt.country_name.local_long_form}`);
+    if (typeof govt.country_name.local_long_form !== 'undefined') {
+      console.log(` > ${govt.country_name.local_long_form}`);
+    }
     console.log(` > ${gender}, age ${ageName}, ${denom} (${dpop}%), ${ethnicGroup} (${ethnicPercent}%)`);
     console.log(` > Average regional skin tone: ${skin}`);
     if (psych !== null && psych !== '') {
