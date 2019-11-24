@@ -395,6 +395,25 @@ function getFlagEmoji(country) {
   return Array.from(cc).map(letterToEmoji).join('');
 }
 
+function getDisability() {
+  const disPct = {
+    'Visual': 2.3,
+    'Hearing': 3.6,
+    'Motor': 6.9,
+    'Cognitive': 5.1,
+    'Self-Care': 2.6,
+    'Independent Living': 5.6,
+  };
+  const list = [];
+
+  Object.keys(disPct).forEach(name => {
+    if (Math.random() * 100 < disPct[name]) {
+      list.push(`${name} (${disPct[name]}%)`);
+    }
+  });
+  return list.length === 0 ? '' : `♿ ${list.join(', ')} impairments`;
+}
+
 function getMentalIllness() {
   const mIllnessPct = {
     'Depression': 6.7,
