@@ -188,12 +188,17 @@ for (var person = 0; person < people; person++) {
     const ethnicPercent = typeof ethnic === 'undefined' ? '-' : ethnic.percent;
     const ageName = typeof age === 'undefined' ? '-' : age.name.replace(/_/g, ' ');
     const govt = ciafact.countries[key].data.government;
+    const impair = getDisability();
     const psych = getMentalIllness();
     if (typeof govt.country_name.local_long_form !== 'undefined') {
       console.log(` > ${govt.country_name.local_long_form}`);
     }
     console.log(` > ${gender}, age ${ageName}, ${denom} (${dpop}%), ${ethnicGroup} (${ethnicPercent}%)`);
     console.log(` > Average regional skin tone: ${skin}`);
+    if (impair !== null && impair !== '') {
+      console.log(` > Living with: ${impair}`);
+    }
+    
     if (psych !== null && psych !== '') {
       console.log(` > Coping with: ${psych}`);
     }
