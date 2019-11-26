@@ -431,14 +431,14 @@ function getMentalIllness() {
     'Social Phobia': 6.8,
     'Schizophrenia': 1.1,
   };
-  let list = [];
+  const list = [];
 
   Object.keys(mIllnessPct).forEach(name => {
     if (Math.random() * 100 < mIllnessPct[name]) {
       list.push(`${name} (${mIllnessPct[name]}%)`);
     }
   });
-  return list.join(', ');
+  return list.length === 0 ? '' : `🧠 ${list.join(', ')}`;
 }
 
 function getLgbt() {
