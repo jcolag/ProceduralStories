@@ -458,7 +458,7 @@ function getLgbt() {
   ];
   const genderPct = [
     {
-      'name': 'transgender',
+      'name': 'transgender ⚧️',
       'value': 0.58,
     },
     {
@@ -487,5 +487,6 @@ function getLgbt() {
     }
   }
   
-  return result === '' ? '' : ` (${result})`;
+  return result === '' ? '' : ` (${result} 🏳️‍🌈)`;
+}
 }
