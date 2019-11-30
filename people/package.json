@@ -9,6 +9,7 @@
   "author": "John Colagioia",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
-    "find-nearest-cities": "^1.0.0"
+    "find-nearest-cities": "^1.0.0",
+    "unidecode-plus": "^1.0.2"
   }
 }
