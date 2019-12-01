@@ -13,6 +13,7 @@ const skinMaxY = Number(skinTonesR[0][1]) + 1;
 const skinRatioX = skinMaxX / countries[0].length;
 const skinRatioY = skinMaxY / countries.length;
 const skinToneMap = [];
+const uiNames = JSON.parse(fs.readFileSync('names.json').toString());
 
 for (stmx = 0; stmx < skinMaxX; stmx++) {
   skinToneMap.push(new Array(skinMaxY));
@@ -489,4 +490,61 @@ function getLgbt() {
   
   return result === '' ? '' : ` (${result} 🏳️‍🌈)`;
 }
+
+function getRandomNameForCitizenOf(country, gender) {
+  const g = gender[0].toUpperCase() === 'M' ? 'male' : 'female';
+  const countries = uiNames
+    .filter(u =>
+      u.region.indexOf(country) >= 0 ||
+      country.indexOf(u.region) >= 0
+    );
+  
+  if (countries.length === 0) {
+    return null;
+  }
+  
+  const cc = countries[0];
+  const gnSet = cc[g];
+  const snSet = cc.surnames;
+  const given = gnSet[Math.trunc(Math.random() * gnSet.length)];
+  let surname = snSet[Math.trunc(Math.random() * snSet.length)];
+  
+  // The following condition adapted from
+  // https://github.com/MayMeow/uinames/commit/b2023a131e986a76bac4c66eb9f1de0dddc830f4
+  if (g === 'female' && country === 'Slovakia') {
+    const last = surname.slice(-1);
+    const lastLetter = surname
+      .slice(-1)
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+    const vowelsA = [ 'a', 'e', 'o', 'u' ];
+    const vowelsB = [ 'i', 'y' ];
+    
+    if (vowelsA.indexOf(lastLetter) >= 0) {
+      surname = `${surname.slice(0, -1)}ová`;
+    } else if (vowelsB.indexOf(lastLetter) >= 0) {
+      surname = `${surname.slice(0, -1)}á`;
+    } else {
+      surname = `${surname}ová`;
+    }
+  }
+  
+  let name = `${given.trim()} ${surname.trim()}`;
+  
+  if (Object.prototype.hasOwnProperty.call(cc, 'exceptions')) {
+    const ex = cc.exceptions;
+    
+    for (var i = 0; i < ex.length; i++) {
+      name = name.replace(ex[i][0], ex[i][1]);
+    }
+  }
+  
+  if ([...name].some(c => c.charCodeAt(0) > 127)) {
+    const xlit = unidecode(name).trim();
+    name = `"${name}" (${xlit})`;
+  } else {
+    name = `"${name}"`;
+  }
+  
+  return name;
 }
