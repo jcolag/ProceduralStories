@@ -1,5 +1,6 @@
 const fs = require('fs');
 const nearestCities = require('find-nearest-cities');
+const unidecode = require('unidecode-plus');
 
 let people = 10;
 const population = loadGrid('population_density_deg.csv');
@@ -181,6 +182,7 @@ for (var person = 0; person < people; person++) {
     const age = chooseRandom(ageList);
     const agePeople = age.males + age.females;
     const gender = (Math.random() * agePeople <= age.males ? 'Male ♂' : 'Female ♀') + getLgbt();
+    const name = getRandomNameForCitizenOf(country, gender);
     const religion = chooseRandom(people.religions.religion);
     const denom = typeof religion === 'undefined' ? '-' : religion.name;
     const dpop = typeof religion === 'undefined' ? '?' : religion.percent;
@@ -195,6 +197,9 @@ for (var person = 0; person < people; person++) {
       console.log(` > ${govt.country_name.local_long_form}`);
     }
     console.log(` > ${gender}, age ${ageName}, ${denom} (${dpop}%), ${ethnicGroup} (${ethnicPercent}%)`);
+    if (name !== null) {
+      console.log(` > Possible name:  ${name}`);
+    }
     console.log(` > Average regional skin tone: ${skin}`);
     if (impair !== null && impair !== '') {
       console.log(` > Living with: ${impair}`);
