@@ -155,13 +155,24 @@ for (var person = 0; person < people; person++) {
 
   // Convert the row and column to a latitude, longitude, and
   // country
+  const signLon = long - zeroLong;
+  let globe = '🌐';
+  
+  if (signLon > -180 && signLon < -30) {
+    globe = '🌎';
+  } else if (signLon < 60) {
+    globe = '🌍';
+  } else {
+    globe = '🌏';
+  }
+  
   const ns = zeroLat > lat ? 'N' : 'S';
   const ew = zeroLong > long ? 'W' : 'E';
   const ccode = countries[lat][long];
   const country = countrycodes[ccode].numeric;
   const flag = getFlagEmoji(countrycodes[ccode].alpha);
   const skin = getSkinTone(skinToneMap, lat, skinRatioY, long, skinRatioX);
-  console.log(`${Math.abs(zeroLat - lat)}${ns} ${Math.abs(zeroLong - long)}${ew} : ${country} ${flag} (${ccode})`);
+  console.log(`${Math.abs(zeroLat - lat)}${ns} ${Math.abs(zeroLong - long)}${ew} ${globe} : ${country} ${flag} (${ccode})`);
   const clat = zeroLat - lat + Math.random() - 0.5;
   const clong = long - zeroLong + Math.random() - 0.5;
   const cities = nearestCities(clat, clong).sort((a,b) => a.distance - b.distance);
