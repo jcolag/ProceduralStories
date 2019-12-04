@@ -564,3 +564,273 @@ function getRandomNameForCitizenOf(country, gender) {
   
   return name;
 }
+
+function getReligionEmoji(religion) {
+  const list = [
+    {
+      "name": "Adventist",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Anglican",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Armenian Apostolic",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Asatru Association",
+      "emoji": "ᚨ",
+    },
+    {
+      "name": "Assembly of God",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Badimo",
+      "emoji": "",
+    },
+    {
+      "name": "Baha'i",
+      "emoji": "✴️",
+    },
+    {
+      "name": "Bektashi",
+      "emoji": "☪️"
+    },
+    {
+      "name": "Buddhis",
+      "emoji": "🕉️"
+    },
+    {
+      "name": "Bukot nan Jesus",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Calvinist",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Cao Dai",
+      "emoji": "👁️"
+    },
+    {
+      "name": "Catholic",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Christian",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Church of",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Confucianism",
+      "emoji": "☯️"
+    },
+    {
+      "name": "Coptic Christian",
+      "emoji": "☦️"
+    },
+    {
+      "name": "Druze",
+      "emoji": "☪️"
+    },
+    {
+      "name": "Orthodox",
+      "emoji": "☦️"
+    },
+    {
+      "name": "Ekalesia Niue",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Evangelical",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Greek Catholic",
+      "emoji": "☦️"
+    },
+    {
+      "name": "Hafnarfjordur Free Church",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Hindu",
+      "emoji": "🕉️"
+    },
+    {
+      "name": "Hoa Hao",
+      "emoji": "🕉️"
+    },
+    {
+      "name": "Iglesia ni Kristo",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Islam",
+      "emoji": "☪️"
+    },
+    {
+      "name": "Jehovah's Witness",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Jewish",
+      "emoji": "✡️"
+    },
+    {
+      "name": "Kimbanguist",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Kirant",
+      "emoji": "",
+    },
+    {
+      "name": "Kiribati Uniting Church",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Lutheran",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Mana",
+      "emoji": "",
+    },
+    {
+      "name": "Methodist",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Modekngei",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Mormon",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Muslim",
+      "emoji": "☪️"
+    },
+    {
+      "name": "New Apostolic",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Old Believer",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Pentecostal",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Presbyterian",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Protestant",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Rastafarian",
+      "emoji": "",
+    },
+    {
+      "name": "Reykjavik Free Church",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Salutiste",
+      "emoji": "",
+    },
+    {
+      "name": "Santeria",
+      "emoji": "",
+    },
+    {
+      "name": "Seventh Day Adventist",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Shamanist",
+      "emoji": "",
+    },
+    {
+      "name": "Shinto",
+      "emoji": "⛩️"
+    },
+    {
+      "name": "Sikh",
+      "emoji": "🕉️"
+    },
+    {
+      "name": "Spiritist",
+      "emoji": "👻"
+    },
+    {
+      "name": "Taois",
+      "emoji": "☯️"
+    },
+    {
+      "name": "Independent Congregation",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Ukrainian Greek Catholic",
+      "emoji": "☦️"
+    },
+    {
+      "name": "Universal Kingdom of God",
+      "emoji": "✝️"
+    },
+    {
+      "name": "Vodoun",
+      "emoji": "",
+    },
+    {
+      "name": "Winti",
+      "emoji": "",
+    },
+    {
+      "name": "atheist",
+      "emoji": "⚛️"
+    },
+    {
+      "name": "Maya",
+      "emoji": "",
+    },
+    {
+      "name": "Chinese",
+      "emoji": "☯️"
+    },
+    {
+      "name": "Inuit",
+      "emoji": "",
+    },
+    {
+      "name": "vodou",
+      "emoji": "",
+    },
+  ];
+  let longest = '';
+  let emoji = '';
+
+  for (let i = 0; i < list.length; i++) {
+    const r = list[i];
+    if (religion.toLowerCase().indexOf(r.name.toLowerCase()) >= 0
+      && r.name.length > longest.length) {
+      longest = r.name;
+      emoji = r.emoji;
+    }
+  }
+  
+  return `${religion} ${emoji}`.trim();
+}
