@@ -195,8 +195,12 @@ for (var person = 0; person < people; person++) {
     const gender = (Math.random() * agePeople <= age.males ? 'Male ♂' : 'Female ♀') + getLgbt();
     const name = getRandomNameForCitizenOf(country, gender);
     const religion = chooseRandom(people.religions.religion);
-    const denom = typeof religion === 'undefined' ? '-' : religion.name;
-    const dpop = typeof religion === 'undefined' ? '?' : religion.percent;
+    const denom = typeof religion === 'undefined'
+      ? '-'
+      : getReligionEmoji(religion.name);
+    const dpop = typeof religion === 'undefined'
+      ? '?'
+      : religion.percent;
     const ethnic = chooseRandom(people.ethnic_groups.ethnicity);
     const ethnicGroup = typeof ethnic === 'undefined' ? '-' : ethnic.name;
     const ethnicPercent = typeof ethnic === 'undefined' ? '-' : ethnic.percent;
