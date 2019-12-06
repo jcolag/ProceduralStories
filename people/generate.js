@@ -224,13 +224,13 @@ for (var person = 0; person < people; person++) {
       console.log(` > Coping with: ${psych}`);
     }
     
-    const g = gender.toLowerCase();
+    const g = gender.toLowerCase().split(' ')[0];
     if (people.literacy && people.literacy.hasOwnProperty(g)) {
       const lit = people.literacy[g];
       if (lit.units === '%') {
         const r = Math.random() * 100;
         if (r <= lit.value) {
-          console.log(' > Literate');
+          console.log(` > Literate 📚 (${lit.value}${lit.units})`);
         }
       } else {
         console.log(`-> Found weird units ("${lit.units}")`);
