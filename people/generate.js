@@ -380,7 +380,7 @@ function onlyUnique(value, index, self) {
 function getColorAtPoint(colors, px, py) {
   const tones = [ '🏿', '🏿', '🏾', '🏾', '🏽', '🏼', '🏻' ];
   
-  if (py >= colors.length || px >= colors[0].length) {
+  if (py >= colors.length || px >= colors[py].length) {
     return {
       r: 0,
       g: 0,
@@ -391,6 +391,18 @@ function getColorAtPoint(colors, px, py) {
   }
   
   const pixel = colors[py][px];
+  
+  if (pixel === null || typeof pixel === 'undefined') {
+    // Something went wrong, here
+    return {
+      r: 0,
+      g: 0,
+      b: 255,
+      isBlack: true,
+      isBlue: true,
+    };
+  }
+  
   const r = pixel.r.toString(16).padStart(2, '0');
   const g = pixel.g.toString(16).padStart(2, '0');
   const b = pixel.b.toString(16).padStart(2, '0');
