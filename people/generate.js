@@ -202,9 +202,15 @@ for (var person = 0; person < people; person++) {
       ? '?'
       : religion.percent;
     const ethnic = chooseRandom(people.ethnic_groups.ethnicity);
-    const ethnicGroup = typeof ethnic === 'undefined' ? '-' : ethnic.name;
-    const ethnicPercent = typeof ethnic === 'undefined' ? '-' : ethnic.percent;
-    const ageName = typeof age === 'undefined' ? '-' : age.name.replace(/_/g, ' ');
+    const ethnicGroup = typeof ethnic === 'undefined'
+      ? '-'
+      : ethnic.name;
+    const ethnicPercent = typeof ethnic === 'undefined'
+      ? '-'
+      : ethnic.percent;
+    const ageName = typeof age === 'undefined'
+      ? '-'
+      : age.name.replace(/_/g, ' ');
     const govt = ciafact.countries[key].data.government;
     const impair = getDisability();
     const psych = getMentalIllness();
