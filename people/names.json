@@ -376,5 +376,11 @@
         "female":["An","Anh","Bình","Bích","Băng","Bạch","Bảo","Châu","Cát","Cúc","Diễm","Diệu","Dung","Duyên","Dương","Giang","Hiền","Hoa","Hoài","Huyền","Hà","Hòa","Hương","Hạ","Hạnh","Hằng","Hồng","Khánh","Kim","Kiều","Lan","Linh","Liên","Ly","Lâm","Lê","Lệ","Mai","Mi","My","Mỹ","Nga","Nguyên","Nguyệt","Ngân","Ngọc","Nhi","Nhiên","Nhân","Như","Oanh","Phương","Phượng","Quyên","Quân","Quỳnh","Thanh","Thi","Thoa","Thu","Thùy","Thư","Thương","Thảo","Thụy","Thủy","Tiên","Trang","Trâm","Trân","Trúc","Tuyết","Tuyền","Tâm","Tú","Uyên","Vy","Vân","Xuân","Yên","Yến","Ái","Ánh","Ý","Đào"],
         "surnames":["Bùi","Bạch","Cao","Chiêm","Chu","Chung","Châu","Danh","Dương","Đinh","Điền","Đoàn","Đào","Đặng","Đỗ","Hoàng","Huỳnh","Hà","Hồ","Hứa","Lâm","Lê","Lý","Lư","Lưu","Lương","Lạc","Lữ","Mai","Mã","Mạc","Nguyễn","Ngô","Phan","Phùng","Phạm","Quách","Thạch","Tiêu","Triệu","Trương","Trần","Trịnh","Tô","Tôn","Tạ","Võ","Vũ","Vương"],
         "exceptions":[["/^(.*) (.*)$/","$2 $1"]]
-    }
+    },
+    {
+        "region":"Wales",
+        "male":["Accalon","Arthwys","Cywair","Dafydd","Delwyn","Dewi","Dylan","Emrys","Frwdwr","Garanwyn","Gloyw","Gruffudd","Gwynedd","Harri","Huw","Hywel","Ieuan","Ifan","Ioan","Iwan","Llywelyn","Maelgwn","Owain","Pedr","Rhodri","Rhun","Rhys","Siôn","Trefor"],
+        "female":["Angharad","Arianrhod","Awen","Bronwen","Cerys","Elain","Gwen","Gwendolen","Gwener","Gwenfrewi","Gwenhwyfar","Gwenllian","Gwenog","Gwynedd","Gwyneira","Gwyneth","Lowri","Mair","Meddyf","Megan","Myfanwy","Rhian","Rhiannon","Rhianwen","Siân","Sioned","Siwan","Tegwen","Ystradwel",],
+        "surnames":["ap Ifan","Carew","Goch","Gruffudd","Rhys",],
+    },
 ]
