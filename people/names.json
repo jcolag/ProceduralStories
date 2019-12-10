@@ -380,7 +380,7 @@
     {
         "region":"Wales",
         "male":["Accalon","Arthwys","Cywair","Dafydd","Delwyn","Dewi","Dylan","Emrys","Frwdwr","Garanwyn","Gloyw","Gruffudd","Gwynedd","Harri","Huw","Hywel","Ieuan","Ifan","Ioan","Iwan","Llywelyn","Maelgwn","Owain","Pedr","Rhodri","Rhun","Rhys","Siôn","Trefor"],
-        "female":["Angharad","Arianrhod","Awen","Bronwen","Cerys","Elain","Gwen","Gwendolen","Gwener","Gwenfrewi","Gwenhwyfar","Gwenllian","Gwenog","Gwynedd","Gwyneira","Gwyneth","Lowri","Mair","Meddyf","Megan","Myfanwy","Rhian","Rhiannon","Rhianwen","Siân","Sioned","Siwan","Tegwen","Ystradwel",],
-        "surnames":["ap Ifan","Carew","Goch","Gruffudd","Rhys",],
-    },
+        "female":["Angharad","Arianrhod","Awen","Bronwen","Cerys","Elain","Gwen","Gwendolen","Gwener","Gwenfrewi","Gwenhwyfar","Gwenllian","Gwenog","Gwynedd","Gwyneira","Gwyneth","Lowri","Mair","Meddyf","Megan","Myfanwy","Rhian","Rhiannon","Rhianwen","Siân","Sioned","Siwan","Tegwen","Ystradwel"],
+        "surnames":["ap Ifan","Carew","Goch","Gruffudd","Rhys"]
+    }
 ]
