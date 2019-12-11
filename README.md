@@ -51,18 +51,21 @@ Given a country, then, `generate` uses the JSON conversion of the [CIA World Fac
 Because the data is on the national level, the religion, ethnicity, and language information do _not_ necessarily correlate appropriately with each other or with location.  To explain, here's one example.
 
 ```
-28S 46W : Brazil (76)
+28S 46W 🌎 : Brazil 🇧🇷 (76)
  Lagoa, 26, BR (-27.60491, -48.46713) 240.974km
  Rio Tavares, 26, BR (-27.64529, -48.47486) 241.262km
  Pantano do Sul, 26, BR (-27.77972, -48.50861) 243.4km
  Armação, 26, BR (-27.74963, -48.50713) 243.55km
  Itacorubi, 26, BR (-27.58315, -48.49503) 244.33km
  > Republica Federativa do Brasil
- > Male, age 25 to 54, Spiritist (2.2%), mulatto (43.1%)
- > Literate
+ > Male ♂ (bisexual 🏳️‍🌈), age 25 to 54, Spiritist 👻 (2.2%), mulatto (43.1%)
+ > Possible name:  "Diego Montes"
+ > Average regional skin tone: #3B3A29 👋🏿
+ > Living with: ♿ Hearing (3.6%) impairments
+ > Coping with: 🧠 Social Phobia (6.8%)
+ > Literate 📚 (92.2%)
 ```
 
-In this case, we've generated someone in a tiny religious minority and a large ethnic minority, so he's a perfect example.  The position is in (or near) Rio de Janeiro, Brazil.  Are the "mulattos" (local term with a specific connotation, not the offensive English term) sufficiently represented around Rio to be likely?  Is there any overlap with Spiritists?  Do Spiritists tend to be in the 25 to 54 age bracket?  Unless you know the area well, it would take research to know definitively.
 
 Ideally, this part of the generation would use the country's census information, but finding and packaging census information for every country in the world would require a prohibitive level of effort.
 
