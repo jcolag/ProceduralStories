@@ -25,7 +25,7 @@ At heart, `astrochar.ex` is a sort of orrery, attempting to mimic [Kepler's laws
 It will start with the features of [Western astrology](https://en.wikipedia.org/wiki/Western_astrology) and presumably incorporate other traditions.  The result _should_ be, based on a birthday, a rough character personality concept and a daily situation.
 
 
-### Background Generation (`generate.js`)
+### Background Generation (`people/generate.js`)
 
 An obvious problem in creating characters is in diversifying backgrounds, especially when it's far easier to assume that everybody looks like one's neighbors.  American sitcoms come to mind as a strong example, where a viewer can still somehow watch a show set in an urban center where ten out of ten people just happen to be white people in their twenties.
 
@@ -39,14 +39,17 @@ Note that:
  * One degree of longitude by one degree of latitude is a _big_ space, but that map is used because the file has a reasonable size.  In the downloads at the SEDAC site, you can also find maps whose cells are one kilometer by one kilometer.  The existing code should at least _mostly_ work for those.
  * A handful of countries recognized by SEDAC are not recognized by the rest of the world.
 
-Given a country, then, `generate` uses the JSON conversion of the [CIA World Factbook](https://github.com/iancoleman/cia_world_factbook_api) to create a random skeletal background for the target person based on the country, including:
+Given a country, then, `generate` uses the JSON conversion of the [CIA World Factbook](https://github.com/iancoleman/cia_world_factbook_api) and other data to create a random skeletal background for the target person based on the country, including:
 
  * Age range
- * Gender
+ * Gender Identity and Sexuality
  * Religion
  * Ethnicity
  * Literacy
+ * Average Skin Tone for the Region
  * Languages Spoken
+ * Physical impairments and psychological disorders
+ * A random name
 
 Because the data is on the national level, the religion, ethnicity, and language information do _not_ necessarily correlate appropriately with each other or with location.  To explain, here's one example.
 
